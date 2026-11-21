@@ -1,0 +1,6 @@
+ClipSignal
+Copyright 2026 the ClipSignal contributors
+
+Licensing and upstream components are documented in docs/deps.md.
+The bundled No Negative Echo skill retains its original MIT license.
+The WeChat Channels module includes code contributed by its original development team.

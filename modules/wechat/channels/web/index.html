@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>视频号工作台</title>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header class="bar">
+    <a href="/" class="brand"><span class="mark" aria-hidden="true"></span><span>视频号工作台</span></a>
+    <form id="search" class="search" role="search">
+      <label class="sr" for="query">搜索视频与作者</label>
+      <div class="search-field">
+        <span class="search-icon" aria-hidden="true"></span>
+        <input id="query" placeholder="搜索作品、作者，或粘贴微信分享链接" maxlength="2048" type="search">
+        <button type="submit">搜索</button>
+      </div>
+    </form>
+    <div class="bar-actions">
+      <fieldset id="appearance" class="themes">
+        <legend class="sr">外观</legend>
+        <label><input type="radio" name="appearance" value="light"><span>日间</span></label>
+        <label><input type="radio" name="appearance" value="dark"><span>夜间</span></label>
+        <label><input type="radio" name="appearance" value="system" checked><span>系统</span></label>
+      </fieldset>
+      <button id="pair" aria-pressed="false">开启 Agent 联动</button>
+    </div>
+  </header>
+  <p id="status" class="status" role="status" hidden></p>
+  <main class="workspace">
+    <aside class="library panel" aria-labelledby="library-title">
+      <div class="panel-heading">
+        <h2 id="library-title">本地作品</h2>
+        <span id="count" class="count" aria-label="作品数量">0</span>
+      </div>
+      <section class="lists">
+        <p id="library-empty" class="secondary library-empty">读取的作品会出现在这里。</p>
+        <ul id="videos"></ul>
+        <h3 id="creator-heading" hidden>匹配的作者</h3>
+        <ul id="creators"></ul>
+      </section>
+      <details class="capture-details">
+        <summary>从微信窗口读取</summary>
+        <form id="capture" class="capture">
+          <p>在微信视频号独立窗口展开评论后，回到这里读取。</p>
+          <label for="share">该作品的分享链接（可选）</label>
+          <input id="share" type="url" placeholder="粘贴分享链接" maxlength="2048">
+          <button class="primary" type="submit">读取视频与评论</button>
+        </form>
+      </details>
+    </aside>
+    <section class="viewer panel" aria-labelledby="viewer-title">
+      <div class="panel-heading">
+        <h1 id="viewer-title">作品预览</h1>
+        <div class="transport" aria-label="切换作品">
+          <button id="previous" class="icon-button" aria-label="上一条" title="上一条" disabled>‹</button>
+          <button id="next" class="icon-button" aria-label="下一条" title="下一条" disabled>›</button>
+        </div>
+      </div>
+      <div id="stage" class="stage">
+        <div class="stage-copy">
+          <h2 id="stage-title">打开一条视频号作品</h2>
+          <h2 id="title" hidden></h2>
+          <p id="play-note">粘贴微信分享链接，或从本地作品中选择一条。</p>
+          <button id="focus-search" class="stage-action" type="button">输入分享链接</button>
+          <a id="share-link" class="stage-action" target="_blank" rel="noopener noreferrer" hidden>打开微信分享入口</a>
+        </div>
+        <div id="stage-visual" class="stage-visual" aria-hidden="true">
+          <div class="film-frame"><span class="film-play"></span><span class="film-length"></span></div>
+          <img id="cover" alt="" hidden>
+        </div>
+      </div>
+      <article id="detail" class="detail" hidden>
+        <div class="byline"><button id="author" class="plain"></button><time id="published"></time><small id="source" class="source"></small></div>
+        <p id="description"></p>
+      </article>
+    </section>
+    <aside class="discussion panel" aria-labelledby="discussion-title">
+      <div class="panel-heading">
+        <h2 id="discussion-title">评论</h2>
+        <button id="refresh" class="quiet" hidden disabled>刷新评论</button>
+      </div>
+      <div id="comments-empty" class="comments-empty" aria-hidden="true"><span class="bubble"></span></div>
+      <p id="coverage" class="secondary coverage" role="status">打开作品后，可在这里查看评论和评论者资料。</p>
+      <ol id="comments"></ol>
+      <button id="more" hidden>加载更多评论</button>
+    </aside>
+  </main>
+  <dialog id="profile">
+    <form method="dialog" class="dialog-head">
+      <h2 id="profile-title">作者资料</h2>
+      <button value="close" aria-label="关闭">关闭</button>
+    </form>
+    <div id="profile-body"></div>
+  </dialog>
+</body>
+</html>

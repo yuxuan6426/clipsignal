@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>融媒体获客 Skills · 项目工作链路</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      color: #172238;
+      background: #f5f3ee;
+      line-height: 1.6;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1240px; margin: auto; padding: 50px 36px 44px; }
+    h1, h2, h3, p { margin: 0; }
+    header { margin-bottom: 30px; }
+    h1 { font-size: clamp(2rem, 4vw, 3.65rem); letter-spacing: -.035em; line-height: 1.15; }
+    header p { font-size: 1rem; color: #4c5870; margin-top: .85rem; }
+    .entry {
+      margin: 0 auto;
+      width: fit-content;
+      max-width: 100%;
+      background: #18263c;
+      color: #fff;
+      text-align: center;
+      border-radius: 18px;
+      padding: 16px 28px;
+    }
+    .entry h2 { font-size: 1.02rem; }
+    .entry p { color: #dbe5f7; font-size: .88rem; margin-top: 4px; }
+    .split {
+      height: 42px;
+      position: relative;
+      background: linear-gradient(#8a95a5, #8a95a5) center top / 1px 18px no-repeat;
+    }
+    .split::before {
+      content: "";
+      position: absolute;
+      inset: 17px 25% 0;
+      border: 1px solid #8a95a5;
+      border-bottom: 0;
+      border-radius: 12px 12px 0 0;
+    }
+    .workflows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .workflow {
+      --accent: #5b367c;
+      --tint: #f1ebf8;
+      padding: 23px;
+      border-radius: 20px;
+      border: 1px solid #dedbd6;
+      background: #fff;
+      box-shadow: 0 10px 24px #15243908;
+    }
+    .lead { --accent: #096459; --tint: #e3f2ed; }
+    .workflow h2 { color: var(--accent); font-size: 1.43rem; }
+    .input { color: #4c5870; font-size: .86rem; margin: 4px 0 18px; }
+    ol { margin: 0; padding: 0; list-style: none; }
+    li {
+      border: 1px solid #e3e5eb;
+      border-radius: 11px;
+      padding: 10px 14px;
+      position: relative;
+      margin-bottom: 16px;
+    }
+    li::after {
+      content: "↓";
+      position: absolute;
+      bottom: -19px;
+      left: calc(50% - .45em);
+      color: var(--accent);
+      font-weight: bold;
+      line-height: 22px;
+    }
+    li h3, .output h3 { font-size: .95rem; }
+    li p, .output p, .notes p { font-size: .84rem; color: #3f4a61; }
+    .output { padding: 11px 14px; border-radius: 11px; background: var(--tint); }
+    .output h3 { color: var(--accent); }
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+      border-top: 1px solid #d8d4cb;
+      padding-top: 16px;
+    }
+    .notes h2 { font-size: .94rem; margin-bottom: 3px; }
+    footer { margin-top: 20px; }
+    a { color: #2e4879; text-underline-offset: 3px; font-size: .86rem; }
+    @media (max-width: 680px) {
+      main { padding: 28px 17px; }
+      .workflows, .notes { grid-template-columns: 1fr; }
+      .split { height: 24px; background-size: 1px 24px; }
+      .split::before { display: none; }
+      .workflow { padding: 18px; }
+    }
+    @media print {
+      main { padding: 12px; }
+      .workflow, .entry, .output { print-color-adjust: exact; }
+      .workflows { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>融媒体获客 Skills</h1>
+      <p>团队在 Codex 里做内容、核验企业线索并交给销售。面向商用车配件等外贸场景。</p>
+    </header>
+
+    <section class="entry" aria-labelledby="entry-title">
+      <h2 id="entry-title">clipsignal · 任务入口</h2>
+      <p>企业资料 · 买家画像 · 活动目标</p>
+    </section>
+    <div class="split" aria-hidden="true"></div>
+
+    <div class="workflows">
+      <section class="workflow" aria-labelledby="edit-title">
+        <h2 id="edit-title">原创剪辑</h2>
+        <p class="input">参考作品 · 企业授权素材 · 内容目标</p>
+        <ol>
+          <li><h3>拆解参考作品</h3><p>记录开场、卖点、证明镜头、节奏、字幕与行动引导。</p></li>
+          <li><h3>组织企业原片</h3><p>把结构映射到授权镜头，编排原创文案和时间轴。</p></li>
+          <li><h3>生成并读回剪映草稿</h3><p>核对轨道、片段、素材引用与预览。</p></li>
+        </ol>
+        <div class="output">
+          <h3>剪辑接手</h3>
+          <p>可编辑草稿、双语预览、字幕与素材来源记录。</p>
+        </div>
+      </section>
+
+      <section class="workflow lead" aria-labelledby="lead-title">
+        <h2 id="lead-title">定向获客</h2>
+        <p class="input">地区 · 品类 · 企业角色 · 关键词</p>
+        <ol>
+          <li><h3>在 Chrome 发现候选</h3><p>查看 X 和 Facebook 可见帖子、企业主页与相关互动。</p></li>
+          <li><h3>回查官网或官方名录</h3><p>核对企业角色、产品匹配、进口能力及主动需求。</p></li>
+          <li><h3>去重并判断跟进条件</h3><p>合并同一企业的来源，把获准跟进的明确询盘整理成补问卡。</p></li>
+        </ol>
+        <div class="output">
+          <h3>销售接手</h3>
+          <p>带来源和时间的候选表，以及符合交接条件的询盘卡。</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="notes">
+      <section>
+        <h2>两条链怎样配合</h2>
+        <p>可独立运行。合用时共享企业资料和买家画像，把买家的高频问题放进下一轮选题。</p>
+      </section>
+      <section>
+        <h2>验收</h2>
+        <p>分别验证草稿读回、候选来源、客户交接及实际触达回执。</p>
+      </section>
+    </div>
+    <footer><a href="workflow.md">查看工作流说明与证据</a></footer>
+  </main>
+</body>
+</html>

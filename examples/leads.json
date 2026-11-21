@@ -1,0 +1,24 @@
+[
+  {
+    "id": "synthetic-x",
+    "company": "Example Parts",
+    "companySite": "https://candidate.example",
+    "role": "distributor",
+    "officialEvidence": "https://candidate.example/about",
+    "signal": "company-reference",
+    "source": "https://candidate.example/catalog",
+    "platform": "x",
+    "observedAt": "2026-11-21T12:00:00+08:00"
+  },
+  {
+    "id": "synthetic-fb",
+    "company": "Example Parts",
+    "companySite": "https://candidate.example",
+    "role": "distributor",
+    "officialEvidence": "https://candidate.example/about",
+    "signal": "company-reference",
+    "source": "https://candidate.example/posts",
+    "platform": "facebook",
+    "observedAt": "2026-11-21T12:03:00+08:00"
+  }
+]

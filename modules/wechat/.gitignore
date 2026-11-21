@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.migration-smoke-tests/
+.env
+channels.sqlite3*
+mcp-*.token

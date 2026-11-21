@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "project": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "tracks": [
+    {
+      "id": "video",
+      "type": "video",
+      "segments": [
+        {
+          "id": "sample",
+          "start_us": 0,
+          "duration_us": 3000000,
+          "path": "sample-video",
+          "source_start_us": 0,
+          "volume": 0
+        }
+      ]
+    }
+  ]
+}

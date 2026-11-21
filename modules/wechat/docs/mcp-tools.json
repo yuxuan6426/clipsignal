@@ -1,0 +1,1611 @@
+{
+  "tools": [
+    {
+      "name": "search_videos",
+      "description": "Search the local library (default) or explicitly query SocialDataX using credits. Use a cursor with the same search.",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "title": "Query",
+            "type": "string"
+          },
+          "source": {
+            "default": "local",
+            "enum": [
+              "local",
+              "socialdatax"
+            ],
+            "title": "Source",
+            "type": "string"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cursor"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_videosArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "Video": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "description": {
+                "title": "Description",
+                "type": "string"
+              },
+              "creator_id": {
+                "title": "Creator Id",
+                "type": "string"
+              },
+              "author": {
+                "title": "Author",
+                "type": "string"
+              },
+              "published_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Published Display"
+              },
+              "share_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Share Url"
+              },
+              "observed_at": {
+                "title": "Observed At",
+                "type": "string"
+              },
+              "source": {
+                "default": "wechat_uia",
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "title": "Source",
+                "type": "string"
+              },
+              "data_source": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Data Source"
+              },
+              "author_avatar_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Author Avatar Url"
+              },
+              "cover_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Cover Url"
+              },
+              "comment_count_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Comment Count Display"
+              },
+              "playback": {
+                "default": "wechat",
+                "enum": [
+                  "wechat",
+                  "browser",
+                  "unavailable"
+                ],
+                "title": "Playback",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "creator_id",
+              "author",
+              "observed_at"
+            ],
+            "title": "Video",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "scope": {
+            "default": "local",
+            "enum": [
+              "local",
+              "socialdatax"
+            ],
+            "title": "Scope",
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Video"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Next Cursor"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "Search",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_video_detail",
+      "description": "Get a work by ID or share URL. Uses Tencent public preview first for new links and may fall back to enabled SocialDataX.",
+      "inputSchema": {
+        "properties": {
+          "reference": {
+            "title": "Reference",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reference"
+        ],
+        "title": "get_video_detailArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          },
+          "author": {
+            "title": "Author",
+            "type": "string"
+          },
+          "published_display": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Published Display"
+          },
+          "share_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Share Url"
+          },
+          "observed_at": {
+            "title": "Observed At",
+            "type": "string"
+          },
+          "source": {
+            "default": "wechat_uia",
+            "enum": [
+              "wechat_uia",
+              "test_fixture",
+              "wechat_public_preview",
+              "authorized_import",
+              "socialdatax"
+            ],
+            "title": "Source",
+            "type": "string"
+          },
+          "data_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data Source"
+          },
+          "author_avatar_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Author Avatar Url"
+          },
+          "cover_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cover Url"
+          },
+          "comment_count_display": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Comment Count Display"
+          },
+          "playback": {
+            "default": "wechat",
+            "enum": [
+              "wechat",
+              "browser",
+              "unavailable"
+            ],
+            "title": "Playback",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "description",
+          "creator_id",
+          "author",
+          "observed_at"
+        ],
+        "title": "Video",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_video_comments",
+      "description": "Read a work's comments, using enabled SocialDataX credits if a public preview lacks comments. Use the same work for paging.",
+      "inputSchema": {
+        "properties": {
+          "reference": {
+            "title": "Reference",
+            "type": "string"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cursor"
+          },
+          "limit": {
+            "default": 30,
+            "maximum": 100,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "reference"
+        ],
+        "title": "get_video_commentsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "Comment": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "author": {
+                "title": "Author",
+                "type": "string"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              },
+              "time_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Time Display"
+              },
+              "likes_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Likes Display"
+              },
+              "reply_count": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Reply Count"
+              },
+              "profile_status": {
+                "default": "unverified",
+                "enum": [
+                  "unverified",
+                  "no_visible_entry",
+                  "linked"
+                ],
+                "title": "Profile Status",
+                "type": "string"
+              },
+              "creator_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Creator Id"
+              }
+            },
+            "required": [
+              "id",
+              "author",
+              "text"
+            ],
+            "title": "Comment",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Comment"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          },
+          "coverage": {
+            "enum": [
+              "partial",
+              "complete",
+              "unavailable"
+            ],
+            "title": "Coverage",
+            "type": "string"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Reason"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Source"
+          },
+          "video_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Video Id"
+          }
+        },
+        "required": [
+          "items",
+          "next_cursor",
+          "coverage"
+        ],
+        "title": "Page",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_comment_replies",
+      "description": "Check replies tied to this exact comment; unavailable if the client cannot verify them.",
+      "inputSchema": {
+        "properties": {
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          },
+          "comment_id": {
+            "title": "Comment Id",
+            "type": "string"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cursor"
+          },
+          "limit": {
+            "default": 30,
+            "maximum": 100,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "video_id",
+          "comment_id"
+        ],
+        "title": "get_comment_repliesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "Comment": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "author": {
+                "title": "Author",
+                "type": "string"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              },
+              "time_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Time Display"
+              },
+              "likes_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Likes Display"
+              },
+              "reply_count": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Reply Count"
+              },
+              "profile_status": {
+                "default": "unverified",
+                "enum": [
+                  "unverified",
+                  "no_visible_entry",
+                  "linked"
+                ],
+                "title": "Profile Status",
+                "type": "string"
+              },
+              "creator_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Creator Id"
+              }
+            },
+            "required": [
+              "id",
+              "author",
+              "text"
+            ],
+            "title": "Comment",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Comment"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          },
+          "coverage": {
+            "enum": [
+              "partial",
+              "complete",
+              "unavailable"
+            ],
+            "title": "Coverage",
+            "type": "string"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Reason"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Source"
+          },
+          "video_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Video Id"
+          }
+        },
+        "required": [
+          "items",
+          "next_cursor",
+          "coverage"
+        ],
+        "title": "Page",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_creator_profile",
+      "description": "Get public profile data for a linked account or the author name shown on a work.",
+      "inputSchema": {
+        "properties": {
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "creator_id"
+        ],
+        "title": "get_creator_profileArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nickname": {
+            "title": "Nickname",
+            "type": "string"
+          },
+          "avatar_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Avatar Url"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Profile Url"
+          },
+          "profile_status": {
+            "default": "unverified",
+            "enum": [
+              "unverified",
+              "linked"
+            ],
+            "title": "Profile Status",
+            "type": "string"
+          },
+          "bio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Bio"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Source"
+          },
+          "data_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data Source"
+          },
+          "observed_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Observed At"
+          }
+        },
+        "required": [
+          "id",
+          "nickname"
+        ],
+        "title": "Creator",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_creator_videos",
+      "description": "List public works from the same source as the linked account. SocialDataX pages may consume credits.",
+      "inputSchema": {
+        "properties": {
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cursor"
+          }
+        },
+        "required": [
+          "creator_id"
+        ],
+        "title": "get_creator_videosArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "Video": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "description": {
+                "title": "Description",
+                "type": "string"
+              },
+              "creator_id": {
+                "title": "Creator Id",
+                "type": "string"
+              },
+              "author": {
+                "title": "Author",
+                "type": "string"
+              },
+              "published_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Published Display"
+              },
+              "share_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Share Url"
+              },
+              "observed_at": {
+                "title": "Observed At",
+                "type": "string"
+              },
+              "source": {
+                "default": "wechat_uia",
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "title": "Source",
+                "type": "string"
+              },
+              "data_source": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Data Source"
+              },
+              "author_avatar_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Author Avatar Url"
+              },
+              "cover_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Cover Url"
+              },
+              "comment_count_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Comment Count Display"
+              },
+              "playback": {
+                "default": "wechat",
+                "enum": [
+                  "wechat",
+                  "browser",
+                  "unavailable"
+                ],
+                "title": "Playback",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "creator_id",
+              "author",
+              "observed_at"
+            ],
+            "title": "Video",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "scope": {
+            "default": "local",
+            "enum": [
+              "local",
+              "socialdatax"
+            ],
+            "title": "Scope",
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Video"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Next Cursor"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "Search",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_creator_work_share_link",
+      "description": "Get a verified WeChat work share link for a selected result from get_creator_videos. SocialDataX may consume credits.",
+      "inputSchema": {
+        "properties": {
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          },
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "creator_id",
+          "video_id"
+        ],
+        "title": "get_creator_work_share_linkArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          },
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "share_url": {
+            "title": "Share Url",
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "authorized_import",
+              "socialdatax"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "creator_id",
+          "video_id",
+          "title",
+          "share_url",
+          "source"
+        ],
+        "title": "CreatorWorkLink",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_commenter_profile",
+      "description": "Read the public account linked to the exact work and comment. SocialDataX profiles may consume credits.",
+      "inputSchema": {
+        "properties": {
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          },
+          "comment_id": {
+            "title": "Comment Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "video_id",
+          "comment_id"
+        ],
+        "title": "get_commenter_profileArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "nickname": {
+            "title": "Nickname",
+            "type": "string"
+          },
+          "avatar_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Avatar Url"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Profile Url"
+          },
+          "profile_status": {
+            "default": "unverified",
+            "enum": [
+              "unverified",
+              "linked"
+            ],
+            "title": "Profile Status",
+            "type": "string"
+          },
+          "bio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Bio"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Source"
+          },
+          "data_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data Source"
+          },
+          "observed_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Observed At"
+          }
+        },
+        "required": [
+          "id",
+          "nickname"
+        ],
+        "title": "Creator",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "open_video",
+      "description": "Show a captured video in the paired browser tab and wait for acknowledgement.",
+      "inputSchema": {
+        "properties": {
+          "reference": {
+            "title": "Reference",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reference"
+        ],
+        "title": "open_videoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "status": {
+            "const": "applied",
+            "title": "Status",
+            "type": "string"
+          },
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "video_id"
+        ],
+        "title": "Navigation",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "navigate_to_user",
+      "description": "Show a linked account's public profile in the paired workbench tab.",
+      "inputSchema": {
+        "properties": {
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id"
+        ],
+        "title": "navigate_to_userArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "status": {
+            "const": "applied",
+            "title": "Status",
+            "type": "string"
+          },
+          "creator_id": {
+            "title": "Creator Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "creator_id"
+        ],
+        "title": "ProfileNavigation",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "get_current_video",
+      "description": "Read the work and playback status reported by the paired local tab.",
+      "inputSchema": {
+        "properties": {},
+        "title": "get_current_videoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "Video": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "description": {
+                "title": "Description",
+                "type": "string"
+              },
+              "creator_id": {
+                "title": "Creator Id",
+                "type": "string"
+              },
+              "author": {
+                "title": "Author",
+                "type": "string"
+              },
+              "published_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Published Display"
+              },
+              "share_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Share Url"
+              },
+              "observed_at": {
+                "title": "Observed At",
+                "type": "string"
+              },
+              "source": {
+                "default": "wechat_uia",
+                "enum": [
+                  "wechat_uia",
+                  "test_fixture",
+                  "wechat_public_preview",
+                  "authorized_import",
+                  "socialdatax"
+                ],
+                "title": "Source",
+                "type": "string"
+              },
+              "data_source": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Data Source"
+              },
+              "author_avatar_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Author Avatar Url"
+              },
+              "cover_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Cover Url"
+              },
+              "comment_count_display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Comment Count Display"
+              },
+              "playback": {
+                "default": "wechat",
+                "enum": [
+                  "wechat",
+                  "browser",
+                  "unavailable"
+                ],
+                "title": "Playback",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "creator_id",
+              "author",
+              "observed_at"
+            ],
+            "title": "Video",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "video": {
+            "$ref": "#/$defs/Video"
+          },
+          "playback_state": {
+            "enum": [
+              "idle",
+              "playing",
+              "paused",
+              "ended",
+              "unavailable",
+              "native_handoff"
+            ],
+            "title": "Playback State",
+            "type": "string"
+          }
+        },
+        "required": [
+          "video",
+          "playback_state"
+        ],
+        "title": "Current",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "navigate_video",
+      "description": "Move within the paired tab's current result list and wait for acknowledgement.",
+      "inputSchema": {
+        "properties": {
+          "direction": {
+            "enum": [
+              "previous",
+              "next"
+            ],
+            "title": "Direction",
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction"
+        ],
+        "title": "navigate_videoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "status": {
+            "const": "applied",
+            "title": "Status",
+            "type": "string"
+          },
+          "video_id": {
+            "title": "Video Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "video_id"
+        ],
+        "title": "Navigation",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
