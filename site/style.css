@@ -122,6 +122,22 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
 .case-output .case-evidence { font-size: .9em; }
 .case-output a, .case-tech-links a { color: var(--case-red-dark); font-weight: 650; }
 
+.case-channel {
+  display: grid;
+  grid-template-columns: clamp(104px, 14vw, 184px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 2.4vw, 30px);
+  margin-bottom: clamp(24px, 3.4vw, 52px);
+  padding: clamp(14px, 2vw, 24px);
+  border: 1px solid var(--case-line);
+  background: #f7fafc;
+}
+.case-channel-art .art { width: 100%; height: auto; }
+.case-channel h3 { margin: 0; font-size: clamp(1.12rem, 1.7vw, 1.55rem); line-height: 1.25; }
+.case-channel p { margin: .55em 0; color: var(--case-muted); }
+.case-channel-links { display: flex; flex-wrap: wrap; gap: .3em 1.25em; }
+.case-channel-links a, #wechat.diagram a { color: var(--case-red-dark); font-weight: 650; }
+
 .case-schedule { background: var(--case-gray); padding-block: clamp(26px, 3.4vw, 46px); }
 .case-schedule h2, .case-technical h2 { font-size: clamp(1.45rem, 2.3vw, 2rem); letter-spacing: -.025em; }
 .case-timeline { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -162,7 +178,9 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
   .case-facts dd { font-size: .95rem; line-height: 1.4; }
   .case-output { grid-template-columns: minmax(95px, 34%) minmax(0, 1fr); align-items: start; }
   .case-output-photo .art { aspect-ratio: 1.1; }
-  .case-output p { font-size: .93rem; }
+  .case-output p, .case-channel p { font-size: .93rem; }
+  .case-channel { grid-template-columns: minmax(80px, 25%) minmax(0, 1fr); align-items: start; }
+  .case-channel-links a { min-height: 34px; display: inline-flex; align-items: center; gap: .25em; }
   .case-setup summary { min-height: 44px; align-content: center; }
   .case-timeline { gap: 14px; }
   .case-timeline article { padding: 0; }
