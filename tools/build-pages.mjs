@@ -12,7 +12,7 @@ const byId = new Map();
 const escape = value => value.replace(/[&"<>]/g, char => ({ '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' })[char]);
 for (const image of images) {
   const { id, file, alt, sha256, width, height } = image;
-  if (!/^(scene-\d\d|diagram-[a-z]+)$/.test(id) || byId.has(id)
+  if (!/^(case-[a-z]+|scene-\d\d|diagram-[a-z]+)$/.test(id) || byId.has(id)
     || file !== id + '.webp' || typeof alt !== 'string' || !alt.trim()
     || !/^[a-f\d]{64}$/.test(sha256)
     || !Number.isSafeInteger(width) || width < 1 || !Number.isSafeInteger(height) || height < 1) throw new Error('Invalid selected artwork entry');
@@ -37,7 +37,7 @@ for (const name of names) {
     (match, tag, id) => {
       const image = byId.get(id);
       if (!image) return match;
-      const priority = id === 'scene-01' ? 'fetchpriority="high"' : 'loading="lazy"';
+      const priority = id === 'case-kooying' ? 'fetchpriority="high"' : 'loading="lazy"';
       const size = ' width="' + image.width + '" height="' + image.height + '"';
       return tag + '<img class="art" ' + priority + size + ' src="' + prefix + 'assets/showcase/' + image.file
         + '" alt="' + escape(image.alt) + '">';

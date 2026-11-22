@@ -1,5 +1,13 @@
 [
   {
+    "id": "case-kooying",
+    "file": "case-kooying.webp",
+    "alt": "商用车鼓式刹车片及制动蹄示意",
+    "sha256": "4f6a29421508dcbcf1623d867fded6e084266e55a69990db46060c0fea87871f",
+    "width": 1440,
+    "height": 960
+  },
+  {
     "id": "diagram-edit",
     "file": "diagram-edit.webp",
     "alt": "剪映制作链：原片、时间轴、草稿、审阅",

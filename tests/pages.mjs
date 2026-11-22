@@ -25,8 +25,12 @@ test('publishes only the two pages, their shared code and approved illustrations
     const guide = readFileSync(join(out, 'guide/index.html'), 'utf8');
     assert.match(index, /href="\.\/guide\/"/);
     assert.match(guide, /href="\.\.\/style\.css"/);
-    if (artwork.some(image => image.id === 'scene-01')) assert.match(index, /\.\/assets\/showcase\/scene-01\.webp/);
-    for (const image of artwork) assert.ok(guide.includes('../assets/showcase/' + image.file));
+    assert.match(index, /fetchpriority="high"[^>]+src="\.\/assets\/showcase\/case-kooying\.webp"/);
+    for (const image of artwork) {
+      assert.ok(index.includes('./assets/showcase/' + image.file) || guide.includes('../assets/showcase/' + image.file));
+    }
+    assert.match(guide, /id="edit"/);
+    assert.match(guide, /id="leads"/);
   } finally {
     rmSync(scratch, { recursive: true });
   }
