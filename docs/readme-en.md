@@ -13,7 +13,9 @@ ClipSignal gives trade show teams two independently usable workflows: editable m
 [Install](../INSTALL.md) · [Product site](pages.md) · [Technical diagrams](diagrams.md) · [中文](../README.md)
 
 <!-- hero:start -->
-![An editorial illustration of cameras and trade show meetings](../assets/showcase/scene-01.webp)
+![A company engineer recording a brake assembly demonstration in the company's own factory](../assets/showcase/scene-01.webp)
+
+*AI-generated product illustration.*
 <!-- hero:end -->
 
 ## Start in Codex
@@ -39,11 +41,20 @@ flowchart LR
 
 | | |
 | --- | --- |
-| ![Shot plan and product samples](../assets/showcase/scene-02.webp) | ![Recording an interview on the exhibition floor](../assets/showcase/scene-03.webp) |
-| ![Layered editing media](../assets/showcase/scene-05.webp) | ![Reviewing company evidence at an exhibition](../assets/showcase/scene-06.webp) |
-| ![ClipSignal system architecture](../assets/showcase/diagram-system.webp) | ![Company verification workflow](../assets/showcase/diagram-leads.webp) |
+| ![Shot plan and product samples](../assets/showcase/scene-02.webp) | ![The company's team recording a demonstration at its own booth](../assets/showcase/scene-03.webp) |
+| ![Layered editing media](../assets/showcase/scene-05.webp) | ![Checking company websites and candidate evidence](../assets/showcase/scene-06.webp) |
 
 </details>
 <!-- showcase:end -->
+
+## Workflow diagrams
+
+**ClipSignal system architecture**
+
+![ClipSignal system architecture](../assets/showcase/diagram-system.webp)
+
+**Company verification**
+
+![Company verification workflow](../assets/showcase/diagram-leads.webp)
 
 [Workflow](workflow.md) · [Acceptance](test.md) · [Agent research](research.md) · [Dependencies](deps.md)

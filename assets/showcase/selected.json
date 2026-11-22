@@ -2,121 +2,161 @@
   {
     "id": "diagram-edit",
     "file": "diagram-edit.webp",
-    "alt": "剪映制作链",
-    "sha256": "e1d5572574e8090418be2753fc286ad333824bf3f64631d994683eb48c0b114b"
+    "alt": "剪映制作链：原片、时间轴、草稿、审阅",
+    "sha256": "12ac039d28c25b89a10a68569aa619b29f71587eba861053076b949121840b90",
+    "width": 1535,
+    "height": 213
   },
   {
     "id": "diagram-event",
     "file": "diagram-event.webp",
-    "alt": "展会全景",
-    "sha256": "8ff610dd22598480de642bcac7b8717d45f0288bf712cad8bcd27d53f6941cd1"
+    "alt": "展会全景：展前策划、现场执行、展后跟进",
+    "sha256": "e49fecdfbd3b6808cefe5895362dde9b71cfa20f91c55bd7f088c3b730fd3add",
+    "width": 1393,
+    "height": 257
   },
   {
     "id": "diagram-evidence",
     "file": "diagram-evidence.webp",
-    "alt": "候选证据结构",
-    "sha256": "6a1ca1ee0c0281bfbde27f0ad69f637ba02c8e80419375239865e30d822e0ee1"
+    "alt": "候选证据卡：来源、企业、角色与状态",
+    "sha256": "9055b4d63c0bf6463faa9be028eaf958036510e4c81b47f377c7018756a67d7a",
+    "width": 1471,
+    "height": 379
   },
   {
     "id": "diagram-leads",
     "file": "diagram-leads.webp",
-    "alt": "海外企业核验链",
-    "sha256": "dca8cb130b56373649f11839323eb21fa48b7ef88e4fe5ff3cb25a2fe6dc8a6b"
+    "alt": "海外企业核验链：博查、Chrome、企业官网、候选表",
+    "sha256": "22640d31f33e6e7612049a2c13bdd508cb8fc604226d75f2b8ea9d6e41aea635",
+    "width": 1535,
+    "height": 203
   },
   {
     "id": "diagram-media",
     "file": "diagram-media.webp",
-    "alt": "拍摄素材结构",
-    "sha256": "9f6828bfbd7674ee8b3495136cfb0aee9fe294fd62969ae9e27d71234e7620df"
+    "alt": "拍摄素材结构：原片、时码与素材清单",
+    "sha256": "1c1076b844426fac22a7cdc129c0b26c9ca66db23f044bc80c64dbb1b7dc0140",
+    "width": 1526,
+    "height": 565
   },
   {
     "id": "diagram-outreach",
     "file": "diagram-outreach.webp",
-    "alt": "发布与触达回执",
-    "sha256": "67185db289fd4b5d7d0f234031edf9de827677b2826763b95f47da6c018899e7"
+    "alt": "发布与触达回执：授权、发信或外呼、回执、交接",
+    "sha256": "4555c0b4fd3c0a11d05ebbbdf951181e341e474a78c7f14f8320ae07ee06f3cd",
+    "width": 1536,
+    "height": 209
   },
   {
     "id": "diagram-repair",
     "file": "diagram-repair.webp",
-    "alt": "修复与项目记忆",
-    "sha256": "dc0f0646730bb82523d15feb27e6a3ee44a6fcc44604fe118b3f35a0c8f01376"
+    "alt": "修复与项目记忆：故障、修复、复验、记忆",
+    "sha256": "0e97123d038014cd1610505503fc3abec42fb990235bfcf5925ffbbf410cd7e8",
+    "width": 1507,
+    "height": 201
   },
   {
     "id": "diagram-setup",
     "file": "diagram-setup.webp",
-    "alt": "首次装载与依赖",
-    "sha256": "f83fd71d1cb14f0a5d999a090237de4523985a1526f9a41de6ccd44ab603ccae"
+    "alt": "首次装载：克隆、安装、预检、测试",
+    "sha256": "9eb619d9e5be9e1106f705c6bbdc2efc8af99e3be9b9118448635db46e819539",
+    "width": 1525,
+    "height": 195
   },
   {
     "id": "diagram-system",
     "file": "diagram-system.webp",
-    "alt": "系统架构",
-    "sha256": "1d5ccbe5bddeed8364ec253de6ff69cf93c275cf79d3c0b9f1f2a12f4d43643d"
+    "alt": "Codex 编排技能，调用媒体、浏览器与 MCP，汇总为交付物",
+    "sha256": "dfb3e6ec1e127946cd9187ff669ecb51b40c845c7da00b2030041e4b79e14084",
+    "width": 1469,
+    "height": 549
   },
   {
     "id": "diagram-wechat",
     "file": "diagram-wechat.webp",
-    "alt": "视频号 MCP 链",
-    "sha256": "e5ca0f6b900aaffd80233e689f623da723220aeb4b58167de9f3a41e5f081b5a"
+    "alt": "视频号 MCP：导入、工作台、SQLite、MCP",
+    "sha256": "851a1359975fd81317d928506e1b2339bd8e28641f6e08587a44c34c9834d574",
+    "width": 1536,
+    "height": 215
   },
   {
     "id": "scene-01",
     "file": "scene-01.webp",
-    "alt": "用摄像机记录展会、展台洽谈和青色信息轨迹",
-    "sha256": "573f4cac7e9c5737c18ea46763c9eb8e2333227289eb2b8577907b894d4807bb"
+    "alt": "企业工程师在自家工厂面对摄像机讲解制动件",
+    "sha256": "30a245750ce60de334eec25e288d919e1ac9786a493af6dbcb8be85ddd603b73",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-02",
     "file": "scene-02.webp",
     "alt": "展前选题用的分镜卡和产品样件",
-    "sha256": "926328da3d13c17caf731a2b2c2d329f9c94f0cd27a74b1dbea6ebc2116ee72d"
+    "sha256": "6fd41bc187ef8f966701dda9ef1d6160a3d0b79ce3beb894c7a1d7e8e2c9e21a",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-03",
     "file": "scene-03.webp",
-    "alt": "展会现场的授权拍摄场景",
-    "sha256": "446f50922445a1cff7c595f07bef9bdda901e2a5270a554fa87809a7a7c78f6d"
+    "alt": "企业团队在自有展台正式录制产品演示",
+    "sha256": "dd71d3f82dcdaa296152b96ae8aab6e88e3e2fdb660dea5ac383ccdc5601debe",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-04",
     "file": "scene-04.webp",
     "alt": "媒体原片与时码整理",
-    "sha256": "3e88dd0214d33e30998f973e1c4a2400ad9cef0510bb205e25b21f5434de1281"
+    "sha256": "2c6277c0eddf404a14be5cf85e816e77ca27cd97bca10a8264f954305e871130",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-05",
     "file": "scene-05.webp",
     "alt": "剪辑素材按时间分层的概念图",
-    "sha256": "0960887104b45e1b914394faa87ea2be2fbe72929aeec5d32dccd16205b5967a"
+    "sha256": "e59b493c8f1ad36c80ce47c7a3235c12666673af8222876b20a3108fbdf0ea8a",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-06",
     "file": "scene-06.webp",
-    "alt": "展会企业线索与来源核验",
-    "sha256": "f66901d4c63d837ec89ed93afdf74250047975cb628f3a7c2d4a54f21dc09932"
+    "alt": "外贸团队核对候选企业的官网和业务资料",
+    "sha256": "c9736278c97075f0c6665e9dd8ed285e7b6cddbcd5f1d2cc69581e24916b2adc",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-07",
     "file": "scene-07.webp",
     "alt": "视频号作品和评论关系示意",
-    "sha256": "31f081d1fff3ed0bd6ca4c6a42b764811a56f98877a95b26232c8141885b3488"
+    "sha256": "1f7555cd502aa4da34f3c52de2278c0b83ab28ce8327b4ee2836947ca152816a",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-08",
     "file": "scene-08.webp",
     "alt": "给海外采购商准备展会邀约",
-    "sha256": "37ea9b7ce4c6025ed769d1bddefbce60e7f0c291cb02f6d5fda85cda216a75ea"
+    "sha256": "99c8635227ed5de762943d4e543860f5bb6f163cf3740b2e644e1d638c9aaa31",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-09",
     "file": "scene-09.webp",
-    "alt": "销售按证据交接候选",
-    "sha256": "888daaee5cc5334d6e8ddadb904d8f3d10c04b20e2765c128b1f785f068bc2ce"
+    "alt": "销售团队核对候选企业证据和待跟进事项",
+    "sha256": "fa47b8aa472503ee4b0228be4178d738bd6782b79306c7a6147d921be79c4ac9",
+    "width": 1440,
+    "height": 960
   },
   {
     "id": "scene-10",
     "file": "scene-10.webp",
     "alt": "展后回访记录与阶段归档",
-    "sha256": "126376ce02b070435d24e1a191631aebcad818902842a141c97bf9f76e5214c8"
+    "sha256": "52e0136ff04060f2f3c12cebf97c2859e92c37d515419396105425da6970ff89",
+    "width": 1440,
+    "height": 960
   }
 ]

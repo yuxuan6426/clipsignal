@@ -11,70 +11,81 @@ tags: ["ClipSignal"]
 
 ```mermaid
 flowchart LR
-  system0["Codex"] --> system1["Skills"] --> system2["Chrome / Agent Plan / MCP"] --> system3["Artifacts"]
+  Codex --> Skills
+  Skills --> Media["Media"]
+  Skills --> Browser["Browser"]
+  Skills --> MCP
+  Media --> Outputs
+  Browser --> Outputs
+  MCP --> Outputs
 ```
 
 ## 展会全景
 
 ```mermaid
 flowchart LR
-  event0["Plan"] --> event1["Meet"] --> event2["Follow-up"]
+  Plan --> Show --> Followup["Follow-up"]
 ```
 
 ## 拍摄素材结构
 
+原片、时码和素材清单归在同一份任务记录里。
+
 ```mermaid
 flowchart LR
-  media0["Raw media"] --> media1["Timecodes"] --> media2["Shot list"] --> media3["Asset map"]
+  Media --> Footage
+  Media --> Timecodes
+  Media --> Map["Asset map"]
 ```
 
 ## 剪映制作链
 
 ```mermaid
 flowchart LR
-  edit0["Source"] --> edit1["Timeline"] --> edit2["Draft"] --> edit3["Review"]
+  Source --> Timeline --> Draft --> Review
 ```
 
 ## 海外企业核验链
 
 ```mermaid
 flowchart LR
-  leads0["Bocha"] --> leads1["Chrome"] --> leads2["Official site"] --> leads3["Shortlist"]
+  Bocha --> Chrome --> Website["Official site"] --> Shortlist
 ```
 
 ## 视频号 MCP 链
 
 ```mermaid
 flowchart LR
-  wechat0["Share / Import"] --> wechat1["Workbench"] --> wechat2["SQLite"] --> wechat3["MCP"]
+  Import --> Workbench --> SQLite --> MCP
 ```
 
 ## 候选证据结构
 
-```mermaid
-flowchart LR
-  evidence0["Source"] --> evidence1["Company"] --> evidence2["Role"] --> evidence3["Status"]
-```
+每条候选证据包含来源、企业、角色和状态。
+
+| 来源 | 企业 | 角色 | 状态 |
+| --- | --- | --- | --- |
+| Source | Company | Role | Status |
 
 ## 发布与触达回执
 
 ```mermaid
 flowchart LR
-  outreach0["Authorize"] --> outreach1["Send / Call"] --> outreach2["Receipt"] --> outreach3["Handoff"]
+  Authorize --> Action["Send / Call"] --> Receipt --> Handoff
 ```
 
 ## 首次装载与依赖
 
 ```mermaid
 flowchart LR
-  setup0["Git clone"] --> setup1["Install"] --> setup2["Preflight"] --> setup3["Synthetic test"]
+  Clone["Git clone"] --> Install --> Preflight --> Test
 ```
 
 ## 修复与项目记忆
 
 ```mermaid
 flowchart LR
-  repair0["Failure"] --> repair1["Repair"] --> repair2["Verify"] --> repair3["Memory"]
+  Failure --> Repair --> Verify --> Memory
 ```
 
-发送、发布、计费或外呼状态未知时，先查服务回执。用各阶段验收时的实际状态判断接手和续跑。 [工作流](workflow.md)
+发送、发布、计费或外呼状态未知时，先查服务回执。用各阶段验收时的实际状态判断接手和续跑。[工作流](workflow.md)

@@ -11,10 +11,11 @@ const images = JSON.parse(readFileSync(join(root, 'assets/showcase/selected.json
 const byId = new Map();
 const escape = value => value.replace(/[&"<>]/g, char => ({ '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' })[char]);
 for (const image of images) {
-  const { id, file, alt, sha256 } = image;
+  const { id, file, alt, sha256, width, height } = image;
   if (!/^(scene-\d\d|diagram-[a-z]+)$/.test(id) || byId.has(id)
     || file !== id + '.webp' || typeof alt !== 'string' || !alt.trim()
-    || !/^[a-f\d]{64}$/.test(sha256)) throw new Error('Invalid selected artwork entry');
+    || !/^[a-f\d]{64}$/.test(sha256)
+    || !Number.isSafeInteger(width) || width < 1 || !Number.isSafeInteger(height) || height < 1) throw new Error('Invalid selected artwork entry');
   const source = join(root, 'assets/showcase', file);
   if (!lstatSync(source).isFile()
     || createHash('sha256').update(readFileSync(source)).digest('hex') !== sha256) {
@@ -37,7 +38,8 @@ for (const name of names) {
       const image = byId.get(id);
       if (!image) return match;
       const priority = id === 'scene-01' ? 'fetchpriority="high"' : 'loading="lazy"';
-      return tag + '<img class="art" ' + priority + ' src="' + prefix + 'assets/showcase/' + image.file
+      const size = ' width="' + image.width + '" height="' + image.height + '"';
+      return tag + '<img class="art" ' + priority + size + ' src="' + prefix + 'assets/showcase/' + image.file
         + '" alt="' + escape(image.alt) + '">';
     });
   const gallery = page.replace(/<article class="scene-tile" data-art="([^"]+)">/g,

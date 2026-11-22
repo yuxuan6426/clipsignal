@@ -8,12 +8,12 @@ tags: ["ClipSignal"]
 # ClipSignal — 面向外贸团队的融媒体获客技能套件
 
 
-**从展会内容，到可核验的海外买家。** ClipSignal 将参考拆解、实拍剪映制作、海外企业核验和渠道触达组织在同一个任务里，分别交付素材与可复查的线索。
+**从企业实拍，到可核验的海外买家。** 团队在自家工厂或自有展台录制，用 ClipSignal 整理原片和字幕并生成剪映草稿。获客链核验企业及来源，销售接手候选和交接卡。
 
 [一句话装载](INSTALL.md) · [双页产品站](docs/pages.md) · [工作流](docs/workflow.md) · [技术图册](docs/diagrams.md) · [English](docs/readme-en.md)
 
 <!-- hero:start -->
-![用摄像机记录展会、展台洽谈和青色信息轨迹](assets/showcase/scene-01.webp)
+![企业工程师在自家工厂面对摄像机讲解制动件](assets/showcase/scene-01.webp)
 
 *ClipSignal 产品场景插画，经本地 New API 生成。*
 <!-- hero:end -->
@@ -53,23 +53,6 @@ flowchart LR
 
 本地工作台、SQLite 和 MCP 承接可见作品与评论。Gmail 邮件、云蝠电话和内容发布各自核对授权与回执，状态不明先核查服务端。[视频号模块](modules/wechat/README.md) · [触达 Skill](.agents/skills/clipsignal-outreach/SKILL.md)
 
-<!-- showcase:start -->
-## 展会场景图册
-
-<details open>
-<summary>从展前准备到展后接手 · AI 场景插画</summary>
-
-| | |
-| --- | --- |
-| ![展前选题用的分镜卡和产品样件](assets/showcase/scene-02.webp) | ![展会现场的授权拍摄场景](assets/showcase/scene-03.webp) |
-| ![媒体原片与时码整理](assets/showcase/scene-04.webp) | ![剪辑素材按时间分层的概念图](assets/showcase/scene-05.webp) |
-| ![展会企业线索与来源核验](assets/showcase/scene-06.webp) | ![视频号作品和评论关系示意](assets/showcase/scene-07.webp) |
-| ![给海外采购商准备展会邀约](assets/showcase/scene-08.webp) | ![销售按证据交接候选](assets/showcase/scene-09.webp) |
-| ![展后回访记录与阶段归档](assets/showcase/scene-10.webp) |  |
-
-</details>
-<!-- showcase:end -->
-
 ## 系统与链路图册
 
 | 技术关系 | 查看图解 |
@@ -92,19 +75,68 @@ flowchart LR
 </details>
 
 <!-- tech:start -->
-<details open>
-<summary>技术图示 · 节点与箭头已逐图核对</summary>
+### 剪映制作链
 
-| | |
-| --- | --- |
-| ![系统架构](assets/showcase/diagram-system.webp) | ![展会全景](assets/showcase/diagram-event.webp) |
-| ![拍摄素材结构](assets/showcase/diagram-media.webp) | ![剪映制作链](assets/showcase/diagram-edit.webp) |
-| ![海外企业核验链](assets/showcase/diagram-leads.webp) | ![视频号 MCP 链](assets/showcase/diagram-wechat.webp) |
-| ![候选证据结构](assets/showcase/diagram-evidence.webp) | ![发布与触达回执](assets/showcase/diagram-outreach.webp) |
-| ![首次装载与依赖](assets/showcase/diagram-setup.webp) | ![修复与项目记忆](assets/showcase/diagram-repair.webp) |
+![剪映制作链：原片、时间轴、草稿、审阅](assets/showcase/diagram-edit.webp)
+
+### 海外企业核验链
+
+![海外企业核验链：博查、Chrome、企业官网、候选表](assets/showcase/diagram-leads.webp)
+
+<details>
+<summary>查看总体架构及其余图示</summary>
+
+**系统架构**
+
+![系统架构](assets/showcase/diagram-system.webp)
+
+**展会全景**
+
+![展会全景](assets/showcase/diagram-event.webp)
+
+**拍摄素材结构**
+
+![拍摄素材结构](assets/showcase/diagram-media.webp)
+
+**视频号 MCP 链**
+
+![视频号 MCP 链](assets/showcase/diagram-wechat.webp)
+
+**候选证据结构**
+
+![候选证据结构](assets/showcase/diagram-evidence.webp)
+
+**发布与触达回执**
+
+![发布与触达回执](assets/showcase/diagram-outreach.webp)
+
+**首次装载与依赖**
+
+![首次装载与依赖](assets/showcase/diagram-setup.webp)
+
+**修复与项目记忆**
+
+![修复与项目记忆](assets/showcase/diagram-repair.webp)
 
 </details>
 <!-- tech:end -->
+
+<!-- showcase:start -->
+## 展会场景图册
+
+<details open>
+<summary>从展前准备到展后接手 · AI 场景插画</summary>
+
+| | |
+| --- | --- |
+| ![展前选题用的分镜卡和产品样件](assets/showcase/scene-02.webp) | ![企业团队在自有展台录制产品演示](assets/showcase/scene-03.webp) |
+| ![媒体原片与时码整理](assets/showcase/scene-04.webp) | ![剪辑素材按时间分层的概念图](assets/showcase/scene-05.webp) |
+| ![外贸团队核对候选企业的官网和业务资料](assets/showcase/scene-06.webp) | ![视频号作品和评论关系示意](assets/showcase/scene-07.webp) |
+| ![给海外采购商准备展会邀约](assets/showcase/scene-08.webp) | ![销售按证据交接候选](assets/showcase/scene-09.webp) |
+| ![展后回访记录与阶段归档](assets/showcase/scene-10.webp) |  |
+
+</details>
+<!-- showcase:end -->
 
 ## 实测与复跑
 
