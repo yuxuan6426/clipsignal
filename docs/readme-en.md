@@ -8,7 +8,7 @@ tags: ["ClipSignal"]
 # ClipSignal — trade content and buyer research
 
 
-ClipSignal is a Windows Codex toolkit for trade-show content and buyer research. Teams can produce an editable Jianying draft from their own factory or booth footage, verify buyer companies, and hand leads to sales for authorized outreach. Zhejiang Kooying's commercial-vehicle brake components are the first case.
+ClipSignal is a Windows Codex toolkit for automated video editing and autonomous buyer discovery. Teams can turn their own factory or booth footage into editable Jianying drafts and verify companies discovered through public social media. Zhejiang Kooying's commercial-vehicle brake components are the first case.
 
 [Install](../INSTALL.md) · [Product site (GitHub Pages)](https://yuxuan6426.github.io/clipsignal/) · [B1X competition](https://b1x.work/events/competitions/cmp_d76ad4530fe1447d8707d3247ce5c7ad) · [Technical diagrams](diagrams.md) · [中文](../README.md)
 
@@ -24,8 +24,8 @@ ClipSignal is a Windows Codex toolkit for trade-show content and buyer research.
 
 | Workflow | Input | Deliverable |
 | --- | --- | --- |
-| Content | Audience, reference works and authorized footage | Markdown shot brief, timestamped sources, editable Jianying draft, bilingual preview and captions |
-| Buyer research | Market, product, buyer role and keywords | Deduplicated companies with separate evidence for product fit, buyer role, import capability and purchase intent |
+| Automated editing | Audience, supplied or discovered references, and authorized footage | An editable Jianying draft, preview and captions, or an emailed reshoot brief when footage is missing and email is authorized |
+| Autonomous buyer discovery | Market, product, buyer role and keywords | Deduplicated companies with separate evidence for product fit, buyer role, import capability and purchase intent |
 | WeChat Channels | Authorized records and visible public material | Local workbench and MCP reads for works, visible comments and recorded account associations |
 | Outreach and handoff | Verified business channels and authorization | Gmail email, Yunfu VoiceAgent calls, appointment and visit records, and sales handoff |
 | Setup and recovery | Windows Codex workspace and module prerequisites | Preflight, checkpoint recovery and reuse of verified project knowledge |
@@ -46,7 +46,7 @@ Yunfu Intelligence (Cloudbat) provides VoiceAgent for outbound sales calls. **yu
 
 ## Verified results
 
-The Kooying run verified a 22-second bilingual draft on the Jianying home screen, one company checked across X and Facebook, and a synthetic inquiry handoff. Gmail self-test sending, Cloudbat knowledge-base readback, and WeChat MCP work and comment reads were checked separately. Live validation tracks publication, email receipt, answered calls and visits as separate outcomes.
+The Kooying run verified a 22-second bilingual draft on the Jianying home screen, one company checked across X and Facebook, and a synthetic inquiry handoff. Gmail self-test sending, Cloudbat knowledge-base readback, and WeChat MCP work and comment reads were checked separately. The complete messaging and contact confirmation workflow still requires validation. Publication, email receipt, answered calls, and visits are checked separately.
 
 ## Workflow diagrams
 
