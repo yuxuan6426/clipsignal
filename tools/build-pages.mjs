@@ -7,7 +7,8 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 if (!process.argv[2]) throw new Error('Usage: node tools/build-pages.mjs <new-output-directory>');
 const out = resolve(process.argv[2]);
 const narration = [
-  'booth-start', 'booth-edit', 'booth-leads', 'booth-outreach', 'booth-case',
+  'booth-start', 'booth-reference', 'booth-edit', 'booth-reshoot',
+  'booth-leads', 'booth-verify', 'booth-outreach', 'booth-case',
   'pitch-start', 'pitch-case', 'pitch-edit', 'pitch-leads', 'pitch-outreach',
   'pitch-event', 'pitch-setup', 'pitch-proof', 'pitch-begin',
 ];

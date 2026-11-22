@@ -47,6 +47,11 @@ let frame = 0;
 let audioAttempt = 0;
 
 query('[data-deck="' + (loop ? 'pitch' : 'booth') + '"]').hidden = true;
+if (loop) {
+  for (const image of query('[data-deck="booth"]').querySelectorAll('img[loading="lazy"]')) {
+    image.loading = 'eager';
+  }
+}
 for (const [i, chapter] of chapters.entries()) {
   select.add(new Option(chapter.label, String(i)));
 }

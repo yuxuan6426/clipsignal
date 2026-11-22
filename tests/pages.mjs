@@ -17,11 +17,14 @@ test('publishes only the three pages, their code and approved media', () => {
     const artwork = JSON.parse(readFileSync(join(root, 'assets/showcase/selected.json'), 'utf8'));
     const demo = readFileSync(join(out, 'demo/index.html'), 'utf8');
     const chapters = [...demo.matchAll(/id="((?:booth|pitch)-[^"]+)" data-seconds="(\d+)"[^>]*>([\s\S]*?)<\/section>/g)];
-    assert.equal(chapters.length, 14);
-    assert.equal(new Set(chapters.map(([, id]) => id)).size, 14);
+    assert.equal(chapters.length, 17);
+    assert.equal(new Set(chapters.map(([, id]) => id)).size, chapters.length);
     const timeFor = mode => chapters.filter(([, id]) => id.startsWith(mode + '-'))
       .reduce((time, [, , seconds]) => time + Number(seconds), 0);
-    assert.equal(timeFor('booth'), 54);
+    const booth = chapters.filter(([, id]) => id.startsWith('booth-'));
+    assert.deepEqual(booth.map(([, , seconds]) => Number(seconds)), [2, 3, 3, 3, 3, 3, 3, 4]);
+    assert.ok(booth.every(([, , , content]) => content.includes('<img class="art"')));
+    assert.equal(timeFor('booth'), 24);
     assert.equal(timeFor('pitch'), 240);
     for (const [, id, seconds, content] of chapters) {
       const cues = [...content.matchAll(/data-cue="(\d+)"/g)].map(([, at]) => Number(at));
