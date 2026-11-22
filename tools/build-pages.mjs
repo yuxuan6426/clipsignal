@@ -6,7 +6,14 @@ import { createHash } from 'node:crypto';
 const root = fileURLToPath(new URL('../', import.meta.url));
 if (!process.argv[2]) throw new Error('Usage: node tools/build-pages.mjs <new-output-directory>');
 const out = resolve(process.argv[2]);
-const names = ['index.html', 'guide/index.html', 'style.css', 'script.js'];
+const narration = [
+  'booth-start', 'booth-edit', 'booth-leads', 'booth-outreach', 'booth-case',
+  'pitch-start', 'pitch-case', 'pitch-edit', 'pitch-leads', 'pitch-outreach',
+  'pitch-event', 'pitch-setup', 'pitch-proof', 'pitch-begin',
+];
+const pages = ['index.html', 'guide/index.html', 'demo/index.html'];
+const names = [...pages, 'style.css', 'script.js', 'demo/demo.css', 'demo/demo.js',
+  'demo/media/pitch-qr.png', ...narration.map(chapter => 'demo/media/' + chapter + '.m4a')];
 const images = JSON.parse(readFileSync(join(root, 'assets/showcase/selected.json'), 'utf8'));
 const byId = new Map();
 const escape = value => value.replace(/[&"<>]/g, char => ({ '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' })[char]);
@@ -55,4 +62,4 @@ for (const image of images) {
   copyFileSync(join(root, rel), join(out, rel));
 }
 writeFileSync(join(out, '.nojekyll'), '');
-console.log('Built two ClipSignal pages with ' + byId.size + ' selected images');
+console.log('Built ' + pages.length + ' ClipSignal pages with ' + byId.size + ' selected images');
