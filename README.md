@@ -26,13 +26,54 @@ Windows 上的 Codex 会话可直接读取装载入口。首次运行用自己�
 
 ## 两条链路，面向两类交接
 
+两条链共用企业资料、买家画像和展会目标。可单独运行，也可在同一个任务里并行。
+
 ```mermaid
-flowchart LR
-    Task["展会任务 · Codex"] --> Media["参考拆解与实拍"]
-    Task --> Market["海外与视频号线索"]
-    Media --> Draft["可编辑剪映草稿"]
-    Market --> Verify["企业与来源核验"]
-    Verify --> Sales["候选表与交接卡"]
+%%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 32, "padding": 10, "subGraphTitleMargin": {"top": 7, "bottom": 12}}}}%%
+flowchart TD
+    accTitle: ClipSignal 展会内容制作与买家核验
+    accDescr: Codex 预检后选择内容制作、买家核验或两者并行。内容链交付录制说明和剪映草稿，获客链交付有来源的候选表与销售交接卡。授权后的发布和邀约另核回执。
+
+    Task["展会任务 · Codex<br/>企业资料、活动目标与目标买家"] --> Preflight{"环境预检通过？"}
+    Preflight -->|已就绪| Route["选择内容链、获客链或并行"]
+    Preflight -->|缺项或故障| Repair["补装依赖或定位报错<br/>核对回执，从检查点复检"]
+    Repair -->|复检通过| Route
+
+    subgraph Media["内容制作"]
+        direction TB
+        Reference["可选 · 拆解参考作品<br/>开头、证明镜头、节奏、时码"] --> ShotList["录制说明<br/>镜头清单、话术与补拍<br/>Markdown 或邮件"]
+        ShotList --> Shoot["自家工厂或展台录制<br/>收集企业授权原片"]
+        Shoot --> Analyze["Agent Plan 理解原片<br/>转写、画面与时码"]
+        Analyze --> Timeline["编排剪映时间轴<br/>字幕与豆包旁白<br/>本地配乐与过渡页"]
+        Timeline --> Draft["交付可编辑剪映草稿<br/>验原生读回与首页可见性"]
+        Draft --> Publish["可选 · 导出与获准发布<br/>留存成片、来源和发布回执"]
+    end
+
+    subgraph Leads["买家核验与交接"]
+        direction TB
+        Profile["定义买家画像<br/>地区、品类、角色、关键词"] --> Find["按渠道发现候选<br/>海外 · 博查与 Chrome<br/>视频号 · 工作台与 MCP"]
+        Find --> Read["读内容、评论和账号主页<br/>记录来源与观察时间"]
+        Read --> Evidence["回查官网或官方名录<br/>核对角色、品类与进口证据"]
+        Evidence --> Pack["去重与分级<br/>候选表与销售交接卡<br/>来源、时间与待核项"]
+        Pack --> Approval{"触达已获授权？"}
+        Approval -->|已获准| Invite["Gmail 邮件或云蝠电话<br/>邀约到展位或工厂"]
+        Invite --> Receipt["核对送达、接通<br/>回复与预约"]
+        Receipt --> Handoff["销售接手及展后跟进"]
+        Approval -->|待授权或补证| Handoff
+    end
+
+    Route --> Reference
+    Route --> Profile
+    Publish --> Close["归档交付物与已核回执<br/>沉淀已验证做法，买家问题回到选题"]
+    Handoff --> Close
+
+    classDef default fill:#fff,stroke:#9babc2,color:#122445
+    style Media fill:#f8faff,stroke:#c5d3e9
+    style Leads fill:#f8faff,stroke:#c5d3e9
+    classDef deliver fill:#eff4ff,stroke:#2457d6,color:#122445
+    classDef check fill:#fff,stroke:#2457d6,color:#122445
+    class ShotList,Draft,Pack,Handoff,Close deliver
+    class Preflight,Approval check
 ```
 
 | 工作阶段 | 内容人员 | 获客与销售 |
