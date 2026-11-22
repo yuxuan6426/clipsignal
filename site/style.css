@@ -115,30 +115,35 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
 .case-red { background: var(--case-red); color: #fff; padding-block: 15px; text-align: center; }
 .case-red h2 { font-size: clamp(1.4rem, 2.55vw, 2.3rem); line-height: 1.25; margin: 0; font-weight: 750; letter-spacing: -.02em; }
 .case-outputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 46px); padding-block: clamp(24px, 3.4vw, 52px); }
-.case-output { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(14px, 2vw, 29px); }
+.case-output { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(14px, 2vw, 29px); }
 .case-output-photo .art { aspect-ratio: 1.7; object-fit: cover; }
 .case-output h3, .case-timeline h3 { font-size: clamp(1.14rem, 1.8vw, 1.62rem); line-height: 1.25; margin: 0; }
 .case-output p, .case-timeline p { color: var(--case-muted); margin: .55em 0; }
-.case-output .case-evidence { font-size: .9em; }
 .case-output a, .case-tech-links a { color: var(--case-red-dark); font-weight: 650; }
 
+.case-support {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 34px);
+  margin-bottom: clamp(24px, 3.4vw, 52px);
+}
 .case-channel {
   display: grid;
-  grid-template-columns: clamp(104px, 14vw, 184px) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(14px, 2.4vw, 30px);
-  margin-bottom: clamp(24px, 3.4vw, 52px);
+  grid-template-columns: minmax(86px, 25%) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(14px, 2vw, 24px);
   padding: clamp(14px, 2vw, 24px);
   border: 1px solid var(--case-line);
   background: #f7fafc;
 }
-.case-channel-art .art { width: 100%; height: auto; }
+.case-channel-art .art { aspect-ratio: 3/2; object-fit: cover; }
 .case-channel h3 { margin: 0; font-size: clamp(1.12rem, 1.7vw, 1.55rem); line-height: 1.25; }
 .case-channel p { margin: .55em 0; color: var(--case-muted); }
 .case-channel-links { display: flex; flex-wrap: wrap; gap: .3em 1.25em; }
 .case-channel-links a, #wechat.diagram a { color: var(--case-red-dark); font-weight: 650; }
 
 .case-schedule { background: var(--case-gray); padding-block: clamp(26px, 3.4vw, 46px); }
+.case-schedule a { color: var(--case-red-dark); font-weight: 650; }
 .case-schedule h2, .case-technical h2 { font-size: clamp(1.45rem, 2.3vw, 2rem); letter-spacing: -.025em; }
 .case-timeline { display: grid; grid-template-columns: repeat(3, 1fr); }
 .case-timeline article { padding-right: clamp(12px, 3vw, 44px); }
@@ -157,6 +162,7 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
 @media (max-width: 860px) {
   .case-hero h1 { font-size: clamp(2.05rem, 5.3vw, 3.7rem); }
   .case-output { grid-template-columns: 1fr; align-content: start; gap: 12px; }
+  .case-support { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   :root { --anchor-offset: 1rem; }

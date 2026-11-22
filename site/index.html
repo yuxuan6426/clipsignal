@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ClipSignal · 冠英展会获客方案</title>
-  <meta name="description" content="面向浙江冠英的上海汽配展方案，从工厂或展台实拍、剪映草稿到海外买家核验、展位邀约和湖州访厂。">
+  <meta name="description" content="ClipSignal 在 Codex 为冠英展会运行全自动剪辑与自主获客，连接微信视频号 MCP 和云蝠智能外呼。">
   <meta property="og:title" content="ClipSignal · 冠英展会获客方案">
-  <meta property="og:description" content="展前录制方案、可编辑剪映草稿及带核验来源的海外买家候选表。">
+  <meta property="og:description" content="用工作区素材做对标视频，从公开作品和评论识别买家，再跟进展位或访厂邀约。">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./style.css">
   <script defer src="./script.js"></script>
@@ -29,7 +29,7 @@
       <div class="case-hero-copy">
         <p class="case-event" lang="en">Automechanika Shanghai 2026</p>
         <h1 id="case-title">冠英的刹车片，<br>怎样找到海外买家？</h1>
-        <p class="case-intro">在冠英工厂或展台录好产品视频，核验买家的采购范围、进口能力和真实需求，再邀约到展位或湖州工厂。</p>
+        <p class="case-intro">Agent 用冠英已有视频对标剪辑，也从视频和评论里找买家，为展位见面或湖州访厂做准备。</p>
         <div class="case-actions">
           <a class="case-button" href="#deliverables">查看两项交付</a>
           <a class="case-button case-outline" href="#schedule">展会安排</a>
@@ -56,43 +56,53 @@
       <article class="case-output">
         <div class="case-output-photo" data-art="scene-03"></div>
         <div>
-          <h3>录制说明与剪映草稿</h3>
-          <p>从对标作品拆开场、卖点、产品实证镜头和节奏，按时码整理成能照着拍的 Markdown 录制说明。实拍后交付可编辑的剪映草稿、双语预览和素材来源记录。</p>
-          <p class="case-evidence">冠英 22 秒双语样片的草稿已在剪映首页人工确认。</p>
-          <a href="./guide/#edit">查看制作流程 <span aria-hidden="true">→</span></a>
+          <h3>全自动剪辑</h3>
+          <p>给 Agent 一条参考视频，或让它自己找对标作品。它用工作区已有的授权素材剪出对标视频，交付可编辑的剪映草稿和预览。</p>
+          <p>素材不够时，Agent 按授权发邮件列出要补拍的镜头，素材回传后再接着剪。</p>
+          <a href="./guide/#edit">查看全自动剪辑流程 <span aria-hidden="true">→</span></a>
         </div>
       </article>
       <article class="case-output">
         <div class="case-output-photo" data-art="scene-09"></div>
         <div>
-          <h3>海外买家候选表</h3>
-          <p>以商用车鼓式刹车片为例，分别核对品类与型号、企业角色、进口能力和主动采购需求。</p>
-          <p class="case-evidence">候选表附来源、核验时间和待核项，方便销售判断先跟进谁、还要问什么。</p>
-          <a href="./guide/#leads">查看买家核验流程 <span aria-hidden="true">→</span></a>
+          <h3>自主获客</h3>
+          <p>Agent 按买家画像查看视频号、Facebook、X 等渠道的作品和评论，核对评论者主页和企业资料，筛出值得联系的买家。</p>
+          <p>后续按授权通过私信邀约，获取对方愿意提供的商务联系方式，再用 Gmail 或云蝠智能跟进。</p>
+          <a href="./guide/#leads">查看自主获客流程 <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
-    <article id="wechat" class="case-shell case-channel" aria-labelledby="wechat-title">
-      <div class="case-channel-art" data-art="scene-07"></div>
-      <div>
-        <h3 id="wechat-title">微信视频号工作台与 MCP</h3>
-        <p>在 Codex 读取视频号作品、可见评论和已关联的公开账号及其作品。把有企业线索的记录接入同一套买家核验流程。工作台与 MCP 随 ClipSignal 按 Apache-2.0 开源发布。</p>
-        <div class="case-channel-links">
-          <a href="./guide/#wechat">查看视频号工作流 <span aria-hidden="true">→</span></a>
-          <a href="https://github.com/yuxuan6426/clipsignal/tree/main/modules/wechat">查看工作台与 MCP 源码 <span aria-hidden="true">↗</span></a>
+    <div class="case-shell case-support" role="group" aria-label="自主获客的两个接入">
+      <article id="wechat" class="case-channel" aria-labelledby="wechat-title">
+        <div class="case-channel-art" data-art="scene-07"></div>
+        <div>
+          <h3 id="wechat-title">微信视频号工作台与 MCP</h3>
+          <p>Codex 通过自研 MCP 读取作品、可见评论和已关联的公开账号。工作台与 MCP 随 ClipSignal 按 Apache-2.0 开源发布。</p>
+          <div class="case-channel-links">
+            <a href="./guide/#wechat">查看视频号工作流 <span aria-hidden="true">→</span></a>
+            <a href="https://github.com/yuxuan6426/clipsignal/tree/main/modules/wechat">查看工作台与 MCP 源码 <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+      <article id="voice" class="case-channel" aria-labelledby="voice-title">
+        <div class="case-channel-art" data-art="scene-08"></div>
+        <div>
+          <h3 id="voice-title">云蝠智能电话外呼</h3>
+          <p>电话由云蝠智能 VoiceAgent 拨打。yuxuan6426 开源了 Windows Codex MCP 接入，提供配置和握手验证。</p>
+          <div class="case-channel-links">
+            <a href="https://www.ccgpt.net/">云蝠智能官网 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/yuxuan6426/yunfu-mcp-windows">Windows Codex MCP 仓库 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="schedule" class="case-schedule" aria-labelledby="schedule-title">
     <div class="case-shell">
       <h2 id="schedule-title">展会安排</h2>
-      <div class="case-timeline">
-        <article><h3>展前</h3><p>选定主推型号，在工厂拍产品与生产现场，做成双语预览和剪映草稿。按品类、角色和进口证据整理第一批买家候选。</p></article>
-        <article><h3>展中</h3><p>在自有展台补拍，审核成片后按授权发布。向获准跟进的买家发送邮件，或通过<a href="https://www.ccgpt.net/aicc/">云蝠智能 VoiceAgent</a>电话邀约，预约展位见面或湖州工厂参观。</p></article>
-        <article><h3>展后</h3><p>分别记录邮件已发送、电话已接通、客户回复、已预约与实际到访。销售接手补问和跟进，买家常问的型号用于下一轮选题。</p></article>
-      </div>
+      <p>先准备产品内容和买家候选，展中邀约到展位或湖州工厂，展后由销售接手。</p>
+      <a href="./guide/#schedule">查看展前、展中与展后安排 <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -101,7 +111,6 @@
     <div class="case-tech-links">
       <a href="./guide/">查看完整工作流 <span aria-hidden="true">→</span></a>
       <a href="./guide/#proof">查看七项能力与实证 <span aria-hidden="true">→</span></a>
-      <a href="./guide/#outreach">云蝠智能与 Windows Codex 接入 <span aria-hidden="true">→</span></a>
       <a href="https://github.com/yuxuan6426/clipsignal/blob/main/INSTALL.md">安装与权限说明 <span aria-hidden="true">↗</span></a>
     </div>
     <details class="case-setup">

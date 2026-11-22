@@ -17,7 +17,7 @@
     <a class="case-brand" href="../"><strong>ClipSignal</strong><span>冠英展会方案</span></a>
     <nav aria-label="主导航">
       <a href="../#deliverables">方案交付</a>
-      <a href="../#schedule">展会安排</a>
+      <a href="#schedule">展会安排</a>
       <a href="./" aria-current="page">工作流</a>
     </nav>
   </div>
@@ -40,13 +40,13 @@
     <h2 id="outputs-title">团队如何接手</h2>
     <div class="guide-outputs">
       <article class="guide-card" data-art="scene-03">
-        <h3>录制说明与剪映草稿</h3>
-        <p>内容人员拿到录制说明、可编辑草稿、双语预览、字幕和素材来源。冠英已有 22 秒草稿经原生读回并在剪映首页人工确认。</p>
+        <h3>全自动剪辑与补拍</h3>
+        <p>内容人员提供参考，或让 Agent 先找参考。素材够则直接出剪映草稿，缺镜头则按授权发补拍邮件。冠英已有 22 秒草稿经原生读回并在剪映首页人工确认。</p>
         <a href="#edit">查看剪映制作链 <span aria-hidden="true">→</span></a>
       </article>
       <article class="guide-card" data-art="scene-06">
-        <h3>海外买家候选表</h3>
-        <p>销售拿到按企业去重的候选、来源与观察时间。品类和型号匹配、买家角色、进口能力和主动需求单独记录，有明确获准询盘时附补问与交接卡。</p>
+        <h3>自主获客与跟进</h3>
+        <p>从作品和评论找到人，从主页和官网判断企业是否符合画像。销售拿到候选、来源和待核项，再按授权进入私信、邮件或电话跟进。</p>
         <a href="#leads">查看企业核验链 <span aria-hidden="true">→</span></a>
       </article>
     </div>
@@ -65,8 +65,8 @@
         <details class="guide-steps">
           <summary>展开选题、录制与成片步骤</summary>
           <ol>
-            <li>可按行业、受众和行动目标搜集热门参考，标注开场、卖点、证明镜头、字幕、行动引导与时码。需要取用获准的网络片段时，通过解析站获取并按时间段裁切，登记来源。</li>
-            <li>生成 Markdown 录制说明，列出样品、景别、话术和补拍要求。授权时可经 Gmail 发送纯文本说明。</li>
+            <li>用户给出参考链接，或让 Agent 按行业、受众和行动目标找热门参考。拆解开场、卖点、证明镜头、字幕、节奏和时码。需要取用获准的网络片段时，通过解析站获取并按时间段裁切，登记来源。</li>
+            <li>盘点工作区里的授权原片，把片段映射到对标结构。素材齐全时直接进入剪辑。缺镜头时生成 Markdown 补拍清单，按授权经 Gmail 发给拍摄同事，注明样品、景别和话术，收到补拍素材后续剪。</li>
             <li>用 Agent Plan 分析授权原片的音频、画面和时码，编排字幕与时间轴。豆包 TTS 2.0 默认女声用于旁白，本地生成原创纯音乐并保留独立音轨。过渡页优先用已连接 Chrome 中的 ChatGPT。Codex ImageGen 备选需接入资产来源校验，再登记来源。</li>
             <li>分别核对原生读回、首页登记和正式导出。成片审核后按账号与平台授权发布，保存作品链接、时间和可见性。</li>
           </ol>
@@ -75,21 +75,29 @@
       <article id="leads" class="diagram">
         <h3>海外企业核验链</h3>
         <div data-art="diagram-leads"></div>
-        <p>博查找入口，连接的 Chrome 阅读 X、Facebook、YouTube 的可见内容、评论与作者主页，再回查官网或官方名录。</p>
+        <p>博查找入口，连接的 Chrome 查看 X、Facebook、YouTube 等已接入渠道的公开内容、评论和作者主页。视频号作品与可见评论走<a href="#wechat">自研工作台和 MCP</a>。</p>
         <details class="guide-steps">
           <summary>展开找客、核验与交付步骤</summary>
           <ol>
             <li>输入地区、产品、目标角色和关键词，可选巡览行业近期动态。冠英可围绕重型商用车售后件筛查批发商、经销商、车桥厂和其他采购企业。</li>
             <li>纯文本记录出处和时间，视频结合音频、画面与时码分析，混合内容关联原帖和媒体。按作品、评论、作者主页、企业官网的顺序保留出处。</li>
             <li>按事件和已核企业域名去重，区分终端、渠道、同业和待核。把产品匹配、进口能力和主动需求分别记证据。明确且获准的询盘附销售交接卡。</li>
-            <li>交付结构化 JSON、Markdown 报告与候选表。企业公开商务联系入口、核验时间和下一步均随候选交接。</li>
+            <li>交付结构化 JSON、Markdown 报告与候选表，保留核验时间和下一步。符合画像且获准触达的候选，转到<a href="#outreach">私信和后续跟进</a>。</li>
           </ol>
         </details>
       </article>
       <article id="outreach" class="diagram">
-        <h3>发布与触达回执</h3>
+        <h3>私信、邮件与电话跟进</h3>
         <div data-art="diagram-outreach"></div>
-        <p>冠英确认对象、账号与邀约内容后，邮件通过 Gmail 发送，电话销售和展会外呼由云蝠智能 VoiceAgent 提供。ClipSignal 编排预约，记录发送、接通、回复、访厂预约及实际到访，再交给销售。</p>
+        <p>邮件通过 Gmail 发送，电话由云蝠智能 VoiceAgent 拨打。私信与后续联系的完整自动链列入实跑验收。</p>
+        <details class="guide-steps">
+          <summary>展开私信、联系方式与跟进</summary>
+          <ol>
+            <li>账号、平台和任务授权均允许时，对符合画像的对象发站内私信，介绍相关品类和展会场景，请对方自愿提供商务邮箱或电话。</li>
+            <li>记录对方回复、联系方式的来源和同意范围。获准后按所留方式跟进，电话邀约使用已配置的语音智能体和线路。</li>
+            <li>按同一任务记录私信及邮件发送、回复、接通、展位或工厂预约与实际到访，交给销售负责后续。</li>
+          </ol>
+        </details>
         <p>Windows 上的 Codex MCP 接入由 <a href="https://github.com/yuxuan6426/yunfu-mcp-windows">yuxuan6426</a> 构建并提供接入支持，公开仓库包含配置指引与握手验收记录。</p>
         <ul class="guide-resources">
           <li><a href="https://www.ccgpt.net/">云蝠智能官网 <span aria-hidden="true">↗</span></a></li>
@@ -137,6 +145,17 @@
     </div>
   </section>
 
+  <section id="schedule" class="case-schedule" aria-labelledby="schedule-title">
+    <div class="case-shell">
+      <h2 id="schedule-title">展会安排</h2>
+      <div class="case-timeline">
+        <article><h3>展前</h3><p>选定主推型号，在工厂拍产品与生产现场，做成双语预览和剪映草稿。按品类、角色和进口证据整理第一批买家候选。</p></article>
+        <article><h3>展中</h3><p>在自有展台补拍，审核成片后按授权发布。向获准跟进的买家发送邮件，或通过<a href="https://www.ccgpt.net/aicc/">云蝠智能 VoiceAgent</a>电话邀约，预约展位见面或湖州工厂参观。</p></article>
+        <article><h3>展后</h3><p>分别记录邮件已发送、电话已接通、客户回复、已预约与实际到访。销售接手补问和跟进，买家常问的型号用于下一轮选题。</p></article>
+      </div>
+    </div>
+  </section>
+
   <section id="proof" class="case-shell guide-block" aria-labelledby="proof-title">
     <h2 id="proof-title">七项能力与实证</h2>
     <p>已验证结果按模块列出。展会实跑验收分别记录发布、收件、通话和到访。</p>
@@ -144,10 +163,10 @@
       <summary>查看七项已验证结果与待验环节</summary>
       <ul class="guide-resources">
         <li><strong>总控与首次配置</strong>　本机 GCC 已编译并运行 Win64 测试程序。接收方首次安装待实测。</li>
-        <li><strong>内容理解与拍摄说明</strong>　Agent Plan 已处理冠英原片和访谈录音，一条展会参考片已从拆解串到草稿。自动选样到 Gmail 发送说明的整链待验。</li>
+        <li><strong>内容理解与拍摄说明</strong>　Agent Plan 已处理冠英原片和访谈录音，一条展会参考片已从拆解串到草稿。自动选样、盘点素材、缺片发补拍邮件和回传续剪的整链待验。</li>
         <li><strong>剪映制片</strong>　冠英 22 秒双语草稿已原生读回并确认首页可见。编辑器播放、正式导出，以及配音、配乐和过渡页合成的完整复跑待验。</li>
         <li><strong>海外线索发现与核验</strong>　X 与 Facebook 合并为一条品类和角色已核的渠道候选，进口能力和采购需求待核。YouTube 已做回放，销售交接已用合成询盘验证。</li>
-        <li><strong>展会发布与触达</strong>　Gmail 自验覆盖发送，云蝠知识库已通过 MCP 读回。收件、语音智能体绑定与线路、实际外呼和企业账号发片待验。</li>
+        <li><strong>展会发布与触达</strong>　Gmail 自验覆盖发送，云蝠知识库已通过 MCP 读回。自动私信取联系方式、邮件收件、语音智能体绑定与线路、实际外呼和企业账号发片待验。</li>
         <li><strong>自研视频号扩展</strong>　已验证公开作品入库、微信窗口评论读取及 Codex MCP 调用。按画像定向发现、核验作者主页到企业候选的自动全链待验。</li>
         <li><strong>自进化与自修复</strong>　隔离演练通过修复、复验、续跑和经验入库。另一轮独立启动命中该记忆，模拟邮件保持待核。</li>
       </ul>
