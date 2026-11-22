@@ -9,6 +9,8 @@ Start with the one-prompt installation and preflight. Read the workflow and test
 - [Verified results and reproducible checks](docs/test.md)
 - [Agent Research and evidence map](docs/research.md)
 - [WeChat Channels workbench and MCP](modules/wechat/README.md)
+- [Yunfu Intelligence VoiceAgent outbound calling](https://www.ccgpt.net/aicc/)
+- [Windows Codex MCP integration by yuxuan6426](https://github.com/yuxuan6426/yunfu-mcp-windows)
 - [Dependencies and licensing](docs/deps.md)
 - [Release inventory](delivery.json)
 - [English quickstart](docs/readme-en.md)

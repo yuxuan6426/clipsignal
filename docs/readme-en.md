@@ -27,7 +27,7 @@ ClipSignal is a Windows Codex toolkit for trade-show content and buyer research.
 | Content | Audience, reference works and authorized footage | Markdown shot brief, timestamped sources, editable Jianying draft, bilingual preview and captions |
 | Buyer research | Market, product, buyer role and keywords | Deduplicated companies with separate evidence for product fit, buyer role, import capability and purchase intent |
 | WeChat Channels | Authorized records and visible public material | Local workbench and MCP reads for works, visible comments and recorded account associations |
-| Outreach and handoff | Verified business channels and authorization | Gmail or Cloudbat outreach, appointment and visit records, with a sales handoff for qualified inquiries |
+| Outreach and handoff | Verified business channels and authorization | Gmail email, Yunfu VoiceAgent calls, appointment and visit records, and sales handoff |
 | Setup and recovery | Windows Codex workspace and module prerequisites | Preflight, checkpoint recovery and reuse of verified project knowledge |
 
 ```mermaid
@@ -53,6 +53,8 @@ flowchart LR
 The content workflow analyzes reference openings, proof shots and pacing, then uses Agent Plan to transcribe and analyze authorized footage. Jianying drafts can include Doubao narration, captions, locally produced original music and transition pages. A separate authorized stage checks export and publication receipts.
 
 Bocha discovers starting points. Connected Chrome follows visible posts, comments and author pages on X, Facebook and YouTube. The workflow checks official company sources and keeps JSON evidence, Markdown reports and a buyer shortlist. In Kooying's brake-lining example, sales asks for the current axle, existing part number or sample before checking the catalog. Kooying confirms fit and the formal quote.
+
+Yunfu Intelligence (Cloudbat) provides VoiceAgent for outbound sales calls. **yuxuan6426** built and supported the Windows Codex MCP integration. The public repository includes setup instructions and handshake verification. [VoiceAgent product page](https://www.ccgpt.net/aicc/) · [Windows Codex MCP repository](https://github.com/yuxuan6426/yunfu-mcp-windows)
 
 ## Verified results
 

@@ -92,7 +92,9 @@ flowchart TD
 
 ### 微信视频号与邀约交接
 
-独立视频号工作台用本机 SQLite 和 MCP 读取作品、可见评论及已有记录支持的账号关联。沿用企业核验和交接字段。Gmail 邮件和云蝠外呼按授权邀请买家见面或访厂，各自核对发送、接通、回复、预约和到访。冠英销售接手时可补问车桥、旧件号或样件并回查目录，由冠英确认适配与正式报价。[视频号工作台](modules/wechat/README.md) · [邀约与销售接手](docs/workflow.md#邀约与销售接手)
+独立视频号工作台用本机 SQLite 和 MCP 读取作品、可见评论及已有记录支持的账号关联。沿用企业核验和交接字段。Gmail 邮件和云蝠智能 VoiceAgent 外呼按授权邀请买家见面或访厂，各自核对发送、接通、回复、预约和到访。冠英销售接手时可补问车桥、旧件号或样件并回查目录，由冠英确认适配与正式报价。[视频号工作台](modules/wechat/README.md) · [邀约与销售接手](docs/workflow.md#邀约与销售接手)
+
+**电话销售与接入贡献。** 云蝠智能 VoiceAgent 提供电话销售与外呼服务。Windows 上的 Codex MCP 接入由 **yuxuan6426** 构建并提供接入支持。[云蝠智能官网](https://www.ccgpt.net/) · [VoiceAgent 产品页](https://www.ccgpt.net/aicc/) · [yunfu-mcp-windows 仓库](https://github.com/yuxuan6426/yunfu-mcp-windows)
 
 ### 总控、首装与续跑
 

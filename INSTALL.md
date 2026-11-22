@@ -34,7 +34,9 @@ sources: [{"id":"codex","title":"OpenAI CLI installation and Codex skill locatio
 | `leads` | 博查、已连接的 Chrome、Node.js | 可见来源与官网核验、合成候选的合并及待核状态 |
 | `wechat` | 独立 Conda 环境和工作台 MCP，按读取路径配置数据与微信桌面 | 作品与可见评论读回 |
 | `publish` | 审核后的成片、Chrome 文件访问和目标账号授权 | 作品链接、时间与可见性 |
-| `outreach` | Gmail 账户授权、云蝠知识和所选业务的已配置线路 | 发送与收件、知识读回与通话分别验收 |
+| `outreach` | Gmail 账户授权、云蝠智能 VoiceAgent 与所选业务的已配置线路 | 发送与收件、知识读回与通话分别验收 |
+
+电话销售由云蝠智能提供，Windows Codex MCP 接入由 yuxuan6426 构建并提供接入支持。[云蝠智能官方 MCP 说明](https://www.ccgpt.net/news_detail/117/) · [Windows 接入仓库](https://github.com/yuxuan6426/yunfu-mcp-windows) · [Codex 配置指引](https://github.com/yuxuan6426/yunfu-mcp-windows/blob/main/codex-windows.md)
 
 总控从回执定位所选模块的缺项或故障。修复后重跑原环节，已验证的经验和适用条件由项目记忆复用。[工作流](docs/workflow.md) · [验收](docs/test.md)
 

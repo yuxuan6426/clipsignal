@@ -22,6 +22,7 @@ ClipSignal is a Windows Codex toolkit for foreign-trade content production and e
 | 公开社媒如何到企业候选，怎样区分进口能力与采购意向 | [买家发现与核验](workflow.md#买家发现与核验) · [分流实现](../tools/leads.mjs) · [合成输入](../examples/leads.json) |
 | 视频号提供哪些 MCP 方法 | [工作台说明](../modules/wechat/README.md) · [工具定义](../modules/wechat/docs/mcp-tools.json) |
 | 发布、邮件、外呼、预约与接手如何分别验收 | [销售接手](workflow.md#邀约与销售接手) · [发布 Skill](../.agents/skills/clipsignal-publish/SKILL.md) · [触达 Skill](../.agents/skills/clipsignal-outreach/SKILL.md) |
+| 电话销售服务提供方与 Windows MCP 接入贡献 | [云蝠智能 VoiceAgent 产品页](https://www.ccgpt.net/aicc/) · [官方 MCP 说明](https://www.ccgpt.net/news_detail/117/) · [yuxuan6426 的接入仓库](https://github.com/yuxuan6426/yunfu-mcp-windows) · [接入实测](https://github.com/yuxuan6426/yunfu-mcp-windows/blob/main/verification.md) |
 | 首次预检、修复、复验和经验复用如何串联 | [运行与修复](workflow.md#首次配置修复与复用) · [总控 Skill](../.agents/skills/clipsignal/SKILL.md) |
 | 冠英实测、合成复跑与现场待验分别有哪些 | [验收记录](test.md) · [产品站与发布](pages.md) · [分发清单](../delivery.json) |
 
