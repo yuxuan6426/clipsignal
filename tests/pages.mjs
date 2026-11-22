@@ -8,14 +8,31 @@ import test from 'node:test';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
-test('publishes only the two pages, their shared code and approved illustrations', () => {
+test('publishes only the three pages, their code and approved media', () => {
   const scratch = mkdtempSync(join(tmpdir(), 'clipsignal-pages-'));
   const out = join(scratch, 'clipsignal');
   try {
     const result = spawnSync(process.execPath, ['tools/build-pages.mjs', out], { cwd: root, encoding: 'utf8' });
     assert.equal(result.status, 0, result.stderr);
     const artwork = JSON.parse(readFileSync(join(root, 'assets/showcase/selected.json'), 'utf8'));
+    const demo = readFileSync(join(out, 'demo/index.html'), 'utf8');
+    const chapters = [...demo.matchAll(/id="((?:booth|pitch)-[^"]+)" data-seconds="(\d+)"[^>]*>([\s\S]*?)<\/section>/g)];
+    assert.equal(chapters.length, 14);
+    assert.equal(new Set(chapters.map(([, id]) => id)).size, 14);
+    const timeFor = mode => chapters.filter(([, id]) => id.startsWith(mode + '-'))
+      .reduce((time, [, , seconds]) => time + Number(seconds), 0);
+    assert.equal(timeFor('booth'), 54);
+    assert.equal(timeFor('pitch'), 240);
+    for (const [, id, seconds, content] of chapters) {
+      const cues = [...content.matchAll(/data-cue="(\d+)"/g)].map(([, at]) => Number(at));
+      assert.equal(cues[0], 0, 'First subtitle for ' + id);
+      assert.ok(cues.every((at, i) => at < Number(seconds) * 1000 && (!i || cues[i - 1] < at)), 'Subtitle order for ' + id);
+      const voice = readFileSync(join(out, 'demo/media', id + '.m4a'));
+      assert.equal(voice.subarray(4, 8).toString(), 'ftyp', 'Playable asset container for ' + id);
+    }
     const expected = ['.nojekyll', 'guide/index.html', 'index.html', 'script.js', 'style.css',
+      'demo/index.html', 'demo/demo.js', 'demo/demo.css', 'demo/media/pitch-qr.png',
+      ...chapters.map(([, id]) => 'demo/media/' + id + '.m4a'),
       ...artwork.map(image => 'assets/showcase/' + image.file)];
     const actual = readdirSync(out, { recursive: true, withFileTypes: true })
       .filter(item => item.isFile())
@@ -25,6 +42,10 @@ test('publishes only the two pages, their shared code and approved illustrations
     const guide = readFileSync(join(out, 'guide/index.html'), 'utf8');
     assert.match(index, /href="\.\/guide\/"/);
     assert.match(guide, /href="\.\.\/style\.css"/);
+    assert.match(index, /href="\.\/demo\/"/);
+    assert.ok(guide.includes('href="../demo/?mode=pitch"'));
+    assert.ok(demo.includes('href="?mode=booth"') && demo.includes('href="?mode=pitch"'));
+    assert.ok(demo.includes('src="./media/pitch-qr.png"') && demo.includes('../assets/showcase/case-kooying.webp'));
     assert.match(index, /fetchpriority="high"[^>]+src="\.\/assets\/showcase\/case-kooying\.webp"/);
     for (const image of artwork) {
       assert.ok(index.includes('./assets/showcase/' + image.file) || guide.includes('../assets/showcase/' + image.file));
