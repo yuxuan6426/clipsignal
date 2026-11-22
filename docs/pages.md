@@ -9,7 +9,7 @@ generated: {"by":"agent:codex","at":"2026-11-22T09:51:19+08:00"}
 
 # 产品站与发布
 
-首页面向浙江冠英团队，依次展示上海汽配展信息、录制与获客交付、展前中后安排及执行入口。展位与日期源自冠英官网。[^kooying]
+首页面向浙江冠英团队，从工厂或展台实拍讲到买家核验、展位见面和湖州访厂。工作流页说明交付、授权、回执及销售补问，通用能力与验收见[工作流](workflow.md)和[验收](test.md)。展位与日期源自冠英官网。[^kooying]
 
 - 用 `node tools/build-pages.mjs .local/pages-preview` 构建到一个新目录。以该目录作为站点根，首页与 `guide/` 使用可移植的相对路径。
 - 仅在仓库公开后，由拥有 Pages 管理权限的 Windows 用户运行 `powershell.exe -NoProfile -File tools/publish-pages.ps1`。脚本核对仓库可见性，选择 GitHub Actions 来源并启动部署。已有本机 GitHub CLI 包装器时可用 `-Gh` 指定。

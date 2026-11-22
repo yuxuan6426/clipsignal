@@ -8,7 +8,7 @@ tags: ["ClipSignal"]
 # ClipSignal — 面向外贸团队的融媒体获客技能套件
 
 
-**从企业实拍，到可核验的海外买家。** 团队在自家工厂或自有展台录制，用 ClipSignal 整理原片和字幕并生成剪映草稿。获客链核验企业及来源，销售接手候选和交接卡。
+**从工厂或展台实拍，到可核验的买家和销售接手。** ClipSignal 是在 Windows Codex 里运行的技能套件。首发用于冠英商用车汽配展会，交付录制说明、可编辑剪映草稿和带证据的买家候选，支持按授权发布与邀约。
 
 [一句话装载](INSTALL.md) · [双页产品站](docs/pages.md) · [工作流](docs/workflow.md) · [技术图册](docs/diagrams.md) · [English](docs/readme-en.md)
 
@@ -84,15 +84,19 @@ flowchart TD
 
 ### 内容制作
 
-参考作品解析为时码和镜头说明。用授权原片编排时间轴、字幕及旁白；独立草稿经原生读回后再做首页登记与成片验收。[剪辑 Skill](.agents/skills/clipsignal-edit/SKILL.md)
+拆解参考作品的开场、卖点、证明镜头和节奏，转成带时码的 Markdown 录制说明，可按授权通过 Gmail 寄给拍摄同事。Agent Plan 分析企业授权原片，结合豆包 TTS 2.0 旁白、字幕、本地原创纯音乐与过渡页，制作可编辑的剪映草稿。交付预览与素材来源，分别验收首页登记、导出与获准发布。[内容工作流](docs/workflow.md#内容制作与发布)
 
 ### 海外企业核验
 
-博查用于发现入口。Chrome 读取可见帖子、评论和企业主页，官网或官方名录用于核对企业角色和品类。候选表保留原始来源、观察时间和待核项。[候选输入](examples/leads.json) · [分流 Skill](.agents/skills/clipsignal-leads/SKILL.md)
+用博查发现入口，在连接的 Chrome 沿 X、Facebook、YouTube 的可见帖子、评论和作者主页追溯到企业。把产品匹配、角色、进口能力和主动需求分别核对，按已核主体去重，交付 JSON、Markdown 报告和带观察时间的候选表。明确且获准跟进的询盘进入销售交接。[买家核验](docs/workflow.md#买家发现与核验) · [合成候选输入](examples/leads.json)
 
-### 微信视频号与渠道触达
+### 微信视频号与邀约交接
 
-本地工作台、SQLite 和 MCP 承接可见作品与评论。Gmail 邮件、云蝠电话和内容发布各自核对授权与回执，状态不明先核查服务端。[视频号模块](modules/wechat/README.md) · [触达 Skill](.agents/skills/clipsignal-outreach/SKILL.md)
+独立视频号工作台用本机 SQLite 和 MCP 读取作品、可见评论及已有记录支持的账号关联。沿用企业核验和交接字段。Gmail 邮件和云蝠外呼按授权邀请买家见面或访厂，各自核对发送、接通、回复、预约和到访。冠英销售接手时可补问车桥、旧件号或样件并回查目录，由冠英确认适配与正式报价。[视频号工作台](modules/wechat/README.md) · [邀约与销售接手](docs/workflow.md#邀约与销售接手)
+
+### 总控、首装与续跑
+
+Codex 总控按任务预检模块与业务权限。从失败环节和原回执定位，查文档、修复并复验后续跑。交付通过后，工作区记忆收录经验证的做法和适用条件，供下一次任务自动查阅。[首次配置](docs/setup.md) · [运行与修复](docs/workflow.md#首次配置修复与复用)
 
 ## 系统与链路图册
 
@@ -181,6 +185,6 @@ flowchart LR
 
 ## 实测与复跑
 
-合成候选分流、剪映草稿原生读回、视频号作品与评论的本地 MCP 调用、同机换路径复跑均有独立验收办法。剪映首页登记、正式成片发布、邮件送达、外呼接通和到访单独核对。[验收步骤](docs/test.md) · [Agent Research](docs/research.md) · [分发清单](delivery.json)
+冠英案例已验证 22 秒双语草稿首页人工确认、X 与 Facebook 同一企业核验和合成询盘交接。另有 Gmail 自验发送、云蝠知识库读回、视频号 MCP 作品与评论读取。正式成片发布、邮件收件、外呼接通和到访按展会现场回执分别验收。[验收步骤](docs/test.md) · [Agent Research](docs/research.md) · [分发清单](delivery.json)
 
 [依赖](docs/deps.md) · [Apache-2.0](LICENSE) · [Agent 检索入口](llms.txt)

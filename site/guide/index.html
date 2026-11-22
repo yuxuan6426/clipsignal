@@ -27,7 +27,7 @@
     <div class="case-shell guide-intro">
       <a class="crumb" href="../">← 返回方案首页</a>
       <h1>冠英展会工作流</h1>
-      <p>从现场录制、剪映草稿到海外买家核验与销售交接。</p>
+      <p>两条工作链可以各自运行，也可共用冠英的买家画像、品牌资料和展会目标。</p>
       <nav aria-label="工作流内容">
         <a href="#outputs">交付物</a>
         <a href="#diagrams">架构与链路</a>
@@ -41,12 +41,12 @@
     <div class="guide-outputs">
       <article class="guide-card" data-art="scene-03">
         <h3>录制说明与剪映草稿</h3>
-        <p>按镜头清单在工厂或展台录制。授权原片经时码整理、配字幕，再交接可编辑草稿。</p>
+        <p>内容人员拿到录制说明、可编辑草稿、双语预览、字幕和素材来源。冠英已有 22 秒草稿经原生读回并在剪映首页人工确认。</p>
         <a href="#edit">查看剪映制作链 <span aria-hidden="true">→</span></a>
       </article>
       <article class="guide-card" data-art="scene-06">
         <h3>海外买家候选表</h3>
-        <p>核对买家角色、采购品类和来源。候选按匹配度与证据完整度分流，销售据此接手。</p>
+        <p>销售拿到按企业去重的候选、来源与观察时间。品类和型号匹配、买家角色、进口能力和主动需求单独记录，有明确获准询盘时附补问与交接卡。</p>
         <a href="#leads">查看企业核验链 <span aria-hidden="true">→</span></a>
       </article>
     </div>
@@ -61,27 +61,81 @@
       <article id="edit" class="diagram">
         <h3>剪映制作链</h3>
         <div data-art="diagram-edit"></div>
-        <p>录制原片经时间轴制作和草稿审阅，交给剪辑同事继续编辑。</p>
+        <p>从对标拆解到工厂或展台拍摄，再把授权原片制作为带字幕、音轨和来源记录的剪映草稿。</p>
+        <details class="guide-steps">
+          <summary>展开选题、录制与成片步骤</summary>
+          <ol>
+            <li>按行业、受众和行动目标搜集参考，标注开场、卖点、证明镜头、节奏与时码。需要取用获准的网络片段时，通过解析站获取并按时间段裁切，登记来源。</li>
+            <li>生成 Markdown 录制说明，列出样品、景别、话术和补拍要求。授权时可经 Gmail 发送纯文本说明。</li>
+            <li>用 Agent Plan 分析授权原片的音频、画面和时码，编排字幕与时间轴。豆包 TTS 2.0 默认女声用于旁白，本地生成原创纯音乐并保留独立音轨。过渡页优先用已连接 Chrome 中的 ChatGPT，备选为 Codex ImageGen，均需记录来源。</li>
+            <li>分别核对原生读回、首页登记和正式导出。成片审核后按账号与平台授权发布，保存作品链接、时间和可见性。</li>
+          </ol>
+        </details>
       </article>
       <article id="leads" class="diagram">
         <h3>海外企业核验链</h3>
         <div data-art="diagram-leads"></div>
-        <p>从搜索与公开社媒发现候选，回查官网或官方名录，形成候选表。</p>
+        <p>博查找入口，连接的 Chrome 阅读 X、Facebook、YouTube 的可见内容、评论与作者主页，再回查官网或官方名录。</p>
+        <details class="guide-steps">
+          <summary>展开找客、核验与交付步骤</summary>
+          <ol>
+            <li>输入地区、产品、目标角色和关键词。以冠英为例，可围绕重型商用车售后件筛查批发商、经销商、车桥厂和其他采购企业。</li>
+            <li>纯文本记录出处和时间，视频结合音频、画面与时码分析，混合内容关联原帖和媒体。按作品、评论、作者主页、企业官网的顺序保留出处。</li>
+            <li>按事件和已核企业域名去重，区分终端、渠道、同业和待核。把产品匹配、进口能力和主动需求分别记证据。明确且获准的询盘附销售交接卡。</li>
+            <li>交付结构化 JSON、Markdown 报告与候选表。企业公开商务联系入口、核验时间和下一步均随候选交接。</li>
+          </ol>
+        </details>
       </article>
-      <article id="event" class="diagram"><h3>展会全景</h3><div data-art="diagram-event"></div></article>
-      <article id="media" class="diagram"><h3>拍摄素材结构</h3><div data-art="diagram-media"></div></article>
-      <article id="evidence" class="diagram"><h3>候选证据结构</h3><div data-art="diagram-evidence"></div></article>
-      <article id="outreach" class="diagram"><h3>发布与触达回执</h3><div data-art="diagram-outreach"></div></article>
-      <article id="system" class="diagram"><h3>系统架构</h3><div data-art="diagram-system"></div></article>
-      <article id="wechat" class="diagram"><h3>视频号 MCP 链</h3><div data-art="diagram-wechat"></div></article>
-      <article id="setup" class="diagram"><h3>首次装载与依赖</h3><div data-art="diagram-setup"></div></article>
-      <article id="repair" class="diagram"><h3>修复与项目记忆</h3><div data-art="diagram-repair"></div></article>
+      <article id="outreach" class="diagram">
+        <h3>发布与触达回执</h3>
+        <div data-art="diagram-outreach"></div>
+        <p>冠英确认对象、账号与邀约内容后安排 Gmail 或云蝠执行。登记发送、接通、回复、展位或湖州访厂预约及实际到访，按接手人和待办交接。</p>
+      </article>
+      <article id="evidence" class="diagram">
+        <h3>候选证据与销售补问</h3>
+        <div data-art="diagram-evidence"></div>
+        <p>例如，买家询问鼓式刹车片时，销售补问当前车桥、旧件号或样件，再核对数量、交付条件和目录原页。适配和正式报价由冠英确认。</p>
+      </article>
+      <article id="event" class="diagram">
+        <h3>展会全景</h3>
+        <div data-art="diagram-event"></div>
+        <p>同一展会任务串起素材、买家、邀约与跟进。买家常问的型号和适配问题可以回到下一轮选题。</p>
+      </article>
+      <article id="wechat" class="diagram">
+        <h3>视频号工作台与 MCP</h3>
+        <div data-art="diagram-wechat"></div>
+        <p>独立工作台把公开分享预览或授权导入存入本机 SQLite。作品与评论读取已通过验证。按记录核对已关联的公开账号和作品，再交给企业核验链。自动获客全链列入后续验收。</p>
+      </article>
+      <article id="media" class="diagram">
+        <h3>拍摄素材结构</h3>
+        <div data-art="diagram-media"></div>
+        <p>素材清单记录原片、切点、授权和使用位置，剪辑同事可以从草稿回查到原片。</p>
+      </article>
+      <article id="system" class="diagram">
+        <h3>总控与模块</h3>
+        <div data-art="diagram-system"></div>
+        <p>Codex 从同一入口选择剪辑、找客或组合运行，并用任务和回执关联各环节。</p>
+      </article>
+      <article id="setup" class="diagram">
+        <h3>首次装载与依赖</h3>
+        <div data-art="diagram-setup"></div>
+        <p>新 Windows 设备先在 Codex 预检。兼容软件原位复用，按模块建独立环境，再分别验证剪映、Chrome、Gmail 和业务服务。</p>
+      </article>
+      <article id="repair" class="diagram">
+        <h3>自修复与项目记忆</h3>
+        <div data-art="diagram-repair"></div>
+        <p>遇到故障先查原步骤和服务回执，必要时用博查和 GitHub 查上游文档。修复后重验原环节，通过再续跑。下次任务可以复用有回执和适用条件的做法。</p>
+      </article>
     </div>
   </section>
 
   <section id="proof" class="case-shell guide-block" aria-labelledby="proof-title">
     <h2 id="proof-title">复跑与证据</h2>
-    <p>复跑首次装载、合成候选、视频号 MCP 与剪映原生读回。发布、邮件、通话和预约分别核对实际回执。</p>
+    <ul class="guide-resources">
+      <li><strong>已验证</strong>　冠英 22 秒剪映草稿首页人工确认。X 与 Facebook 线索回查官网后合并为同一渠道候选。另有合成询盘交接、Gmail 自验发送、云蝠知识库读回和视频号 MCP 作品及评论读取。</li>
+      <li><strong>展会实跑验收</strong>　分别核对成片发布、邮件收件、外呼接通与实际到访。合成样例可用于复跑交接规则。</li>
+      <li><strong>后续扩展</strong>　闲时持续巡看、展馆周边定向推广和视频号自动获客全链。</li>
+    </ul>
     <ul class="guide-resources">
       <li><a href="https://github.com/yuxuan6426/clipsignal/blob/main/docs/test.md">验收与复跑步骤 <span aria-hidden="true">↗</span></a></li>
       <li><a href="https://github.com/yuxuan6426/clipsignal/blob/main/examples/leads.json">合成买家线索样例 <span aria-hidden="true">↗</span></a></li>

@@ -1,12 +1,14 @@
 # ClipSignal
 
-> A Windows Codex suite for foreign trade content production and evidence-based buyer research. It connects editable Jianying drafts, company verification, WeChat Channels MCP, and authorized outreach.
+> A Windows Codex suite for foreign-trade content production and evidence-based buyer prospecting. It pairs reference analysis, shot briefs, editable Jianying drafts and source records with browser-based company verification, authorized outreach and sales handoff.
 
-Use the installation guide to load the project skill. Read the workflow capability and acceptance record before making claims about production readiness.
+Start with the one-prompt installation and preflight. Read the workflow and testing records together for module prerequisites, verified results and goals for on-site validation. The first case is Zhejiang Kooying's commercial-vehicle brake components at Automechanika Shanghai.
 
 - [Installation and one-prompt onboarding](INSTALL.md)
-- [Research guide and evidence boundaries](docs/research.md)
-- [Workflow](docs/workflow.md)
+- [Workflow and deliverables](docs/workflow.md)
+- [Verified results and reproducible checks](docs/test.md)
+- [Agent Research and evidence map](docs/research.md)
+- [WeChat Channels workbench and MCP](modules/wechat/README.md)
 - [Dependencies and licensing](docs/deps.md)
 - [Release inventory](delivery.json)
 - [English quickstart](docs/readme-en.md)

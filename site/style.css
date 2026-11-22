@@ -119,6 +119,7 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
 .case-output-photo .art { aspect-ratio: 1.7; object-fit: cover; }
 .case-output h3, .case-timeline h3 { font-size: clamp(1.14rem, 1.8vw, 1.62rem); line-height: 1.25; margin: 0; }
 .case-output p, .case-timeline p { color: var(--case-muted); margin: .55em 0; }
+.case-output .case-evidence { font-size: .9em; }
 .case-output a, .case-tech-links a { color: var(--case-red-dark); font-weight: 650; }
 
 .case-schedule { background: var(--case-gray); padding-block: clamp(26px, 3.4vw, 46px); }
@@ -203,6 +204,10 @@ main [id], #main { scroll-margin-top: var(--anchor-offset); }
 .diagram:target { border-color: var(--case-red); box-shadow: inset 3px 0 var(--case-red); }
 .diagram p { margin: .8em 0 0; }
 .diagram .art { object-fit: contain; }
+.guide-steps { margin-top: .75rem; }
+.guide-steps summary { color: var(--case-red-dark); font-weight: 650; cursor: pointer; }
+.guide-steps ol { margin: .6rem 0 0; padding-inline-start: 1.35rem; color: var(--case-muted); }
+.guide-steps li + li { margin-top: .45rem; }
 .guide-resources { padding-left: 1.25rem; }
 .guide-resources li + li { margin-top: .45rem; }
 .scenes { width: min(1380px, 92%); margin-inline: auto; }

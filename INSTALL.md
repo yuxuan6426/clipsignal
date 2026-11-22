@@ -24,6 +24,18 @@ sources: [{"id":"codex","title":"OpenAI CLI installation and Codex skill locatio
 
 希望在其他 Codex 项目中也能使用时，运行 `powershell.exe -NoProfile -File install.ps1 -UserSkill`。它在用户的 `.agents/skills/clipsignal` 写入轻量入口，完整套件、依赖和私有状态仍位于 checkout。已存在同一入口时可直接复跑，已有不同入口时使用项目入口。下个 Codex 会话按用户级 Skill 发现规则加载，移动 checkout 后需更新该入口。[^codex]
 
-Chrome、Gmail、Agent Plan、云蝠、博查和剪映分别按[首次配置](docs/setup.md)接入。只有该服务的真实验收通过后才标记可运行。
+## 按所选工作流验证
+
+在 Windows 的 Codex 工作区运行预检，按[首次配置](docs/setup.md)准备 Git Bash、PowerShell 7、Miniconda、Node.js 及各模块依赖。检查回执分别报告软件缺项、模块故障、授权和实际验证状态。
+
+| 流程 | 所需条件 | 可核对的结果 |
+| --- | --- | --- |
+| `media` / `edit` | 媒体上游环境、素材访问、Agent Plan、剪映上游环境和剪映专业版 | 原片时码小样、原生草稿读回，以及任务所需的首页登记与导出 |
+| `leads` | 博查、已连接的 Chrome、Node.js | 可见来源与官网核验、合成候选的合并及待核状态 |
+| `wechat` | 独立 Conda 环境和工作台 MCP，按读取路径配置数据与微信桌面 | 作品与可见评论读回 |
+| `publish` | 审核后的成片、Chrome 文件访问和目标账号授权 | 作品链接、时间与可见性 |
+| `outreach` | Gmail 账户授权、云蝠知识和所选业务的已配置线路 | 发送与收件、知识读回与通话分别验收 |
+
+总控从回执定位所选模块的缺项或故障。修复后重跑原环节，已验证的经验和适用条件由项目记忆复用。[工作流](docs/workflow.md) · [验收](docs/test.md)
 
 [^codex]: [OpenAI Codex Skill 安装路径与新会话](<https://developers.openai.com/api/reference/cli>)
