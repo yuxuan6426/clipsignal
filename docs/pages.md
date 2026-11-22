@@ -4,7 +4,7 @@ title: "产品站与发布"
 description: "静态产品站、展台循环、现场路演与 Pages 上线。"
 tags: ["ClipSignal"]
 sources: [{"id":"kooying","title":"浙江冠英官网与展会邀请","resource":"https://cn.kooying.com/"},{"id":"github-pages","title":"GitHub Pages 项目站地址","resource":"https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"}]
-generated: {"by":"agent:codex","at":"2026-11-22T13:31:14+08:00"}
+generated: {"by":"agent:codex","at":"2026-11-22T13:44:17+08:00"}
 ---
 
 # 产品站与发布
@@ -14,7 +14,7 @@ generated: {"by":"agent:codex","at":"2026-11-22T13:31:14+08:00"}
 产品站使用 GitHub Pages 项目站地址，工作流位于同一站点的 `guide/`。[^github-pages] [产品首页](https://yuxuan6426.github.io/clipsignal/) · [工作流](https://yuxuan6426.github.io/clipsignal/guide/)
 
 - 用 `node tools/build-pages.mjs .local/pages-preview` 构建到一个新目录。以该目录作为站点根，首页、工作流与演示使用可移植的相对路径。
-- [54 秒展台循环](https://yuxuan6426.github.io/clipsignal/demo/) 默认静音重复播放。[4 分钟现场路演](https://yuxuan6426.github.io/clipsignal/demo/?mode=pitch) 从封面开始，支持逐章讲解与自动播放。两者的旁白由 Agent Plan 豆包 TTS 2.0 从公开演示讲稿生成，随站点分发。
+- [24 秒展台快切](https://yuxuan6426.github.io/clipsignal/demo/) 由 8 个镜头组成，默认静音重复播放。[4 分钟现场路演](https://yuxuan6426.github.io/clipsignal/demo/?mode=pitch) 从封面开始，支持逐章讲解与自动播放。两者的旁白由 Agent Plan 豆包 TTS 2.0 从公开演示讲稿生成，随站点分发。
 - 站点获准上线且仓库已经公开后，由拥有 Pages 管理权限的 Windows 用户运行 `powershell.exe -NoProfile -File tools/publish-pages.ps1`。脚本核对仓库可见性，选择 GitHub Actions 来源并启动部署。已有本机 GitHub CLI 包装器时可用 `-Gh` 指定。
 - 部署工作流由手动触发，在公开仓库的 `main` 上检查可见性并构建。首次上线由脚本完成 Pages 配置。上线后查看 GitHub Actions 和匿名访问结果，核对首页、`guide/`、两个演示入口及图片和旁白加载。
 - 技术图保留[可维护源](diagrams.md)。场景图为 AI 生成示意，站点按审核过的图片清单和 SHA-256 构建。

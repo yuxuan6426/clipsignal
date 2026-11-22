@@ -11,7 +11,7 @@ tags: ["ClipSignal"]
 
 [产品站（GitHub Pages）](https://yuxuan6426.github.io/clipsignal/) · [B1X 赛事页](https://b1x.work/events/competitions/cmp_d76ad4530fe1447d8707d3247ce5c7ad) · [安装指引](INSTALL.md) · [English](docs/readme-en.md)
 
-[54 秒展台循环](https://yuxuan6426.github.io/clipsignal/demo/) · [4 分钟现场路演](https://yuxuan6426.github.io/clipsignal/demo/?mode=pitch)
+[24 秒展台快切](https://yuxuan6426.github.io/clipsignal/demo/) · [4 分钟现场路演](https://yuxuan6426.github.io/clipsignal/demo/?mode=pitch)
 
 ## 在 Codex 发一句话
 
