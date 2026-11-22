@@ -10,7 +10,7 @@ tags: ["ClipSignal"]
 
 ClipSignal is a Windows Codex toolkit for trade-show content and buyer research. Teams can produce an editable Jianying draft from their own factory or booth footage, verify buyer companies, and hand leads to sales for authorized outreach. Zhejiang Kooying's commercial-vehicle brake components are the first case.
 
-[Install](../INSTALL.md) · [Product site](pages.md) · [Technical diagrams](diagrams.md) · [中文](../README.md)
+[Install](../INSTALL.md) · [Product site (GitHub Pages)](https://yuxuan6426.github.io/clipsignal/) · [B1X competition](https://b1x.work/events/competitions/cmp_d76ad4530fe1447d8707d3247ce5c7ad) · [Technical diagrams](diagrams.md) · [中文](../README.md)
 
 <!-- hero:start -->
 ![A company engineer recording a brake assembly demonstration in the company's own factory](../assets/showcase/scene-01.webp)
@@ -35,18 +35,6 @@ flowchart LR
     A["Trade show task"] --> B["Media and editing"] --> C["Editable draft"]
     A --> D["Company research"] --> E["Evidence and handoff"]
 ```
-
-<!-- showcase:start -->
-<details open>
-<summary>Illustrated workflows</summary>
-
-| | |
-| --- | --- |
-| ![Shot plan and product samples](../assets/showcase/scene-02.webp) | ![The company's team recording a demonstration at its own booth](../assets/showcase/scene-03.webp) |
-| ![Layered editing media](../assets/showcase/scene-05.webp) | ![Checking company websites and candidate evidence](../assets/showcase/scene-06.webp) |
-
-</details>
-<!-- showcase:end -->
 
 ## How the workflows connect
 

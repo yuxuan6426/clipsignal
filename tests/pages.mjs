@@ -36,8 +36,9 @@ test('publishes only the two pages, their shared code and approved illustrations
   }
 });
 
-test('Pages publishes from public main only', () => {
+test('Pages publishes only when manually requested on public main', () => {
   const workflow = readFileSync(join(root, '.github/workflows/pages.yml'), 'utf8');
+  assert.match(workflow, /^on:\s*\n  workflow_dispatch:\s*\n\s*permissions:/m);
   assert.equal((workflow.match(/if: github\.event\.repository\.private == false && github\.ref == 'refs\/heads\/main'/g) ?? []).length, 2);
   assert.match(workflow, /gh api "repos\/\$GITHUB_REPOSITORY" --jq \.private/);
   assert.match(workflow, /path: dist-pages/);

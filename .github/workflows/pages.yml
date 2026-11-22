@@ -1,6 +1,5 @@
 name: Deploy ClipSignal Pages
 on:
-  public:
   workflow_dispatch:
 
 permissions:
