@@ -1,0 +1,122 @@
+[
+  {
+    "id": "diagram-edit",
+    "file": "diagram-edit.webp",
+    "alt": "剪映制作链",
+    "sha256": "e1d5572574e8090418be2753fc286ad333824bf3f64631d994683eb48c0b114b"
+  },
+  {
+    "id": "diagram-event",
+    "file": "diagram-event.webp",
+    "alt": "展会全景",
+    "sha256": "8ff610dd22598480de642bcac7b8717d45f0288bf712cad8bcd27d53f6941cd1"
+  },
+  {
+    "id": "diagram-evidence",
+    "file": "diagram-evidence.webp",
+    "alt": "候选证据结构",
+    "sha256": "6a1ca1ee0c0281bfbde27f0ad69f637ba02c8e80419375239865e30d822e0ee1"
+  },
+  {
+    "id": "diagram-leads",
+    "file": "diagram-leads.webp",
+    "alt": "海外企业核验链",
+    "sha256": "dca8cb130b56373649f11839323eb21fa48b7ef88e4fe5ff3cb25a2fe6dc8a6b"
+  },
+  {
+    "id": "diagram-media",
+    "file": "diagram-media.webp",
+    "alt": "拍摄素材结构",
+    "sha256": "9f6828bfbd7674ee8b3495136cfb0aee9fe294fd62969ae9e27d71234e7620df"
+  },
+  {
+    "id": "diagram-outreach",
+    "file": "diagram-outreach.webp",
+    "alt": "发布与触达回执",
+    "sha256": "67185db289fd4b5d7d0f234031edf9de827677b2826763b95f47da6c018899e7"
+  },
+  {
+    "id": "diagram-repair",
+    "file": "diagram-repair.webp",
+    "alt": "修复与项目记忆",
+    "sha256": "dc0f0646730bb82523d15feb27e6a3ee44a6fcc44604fe118b3f35a0c8f01376"
+  },
+  {
+    "id": "diagram-setup",
+    "file": "diagram-setup.webp",
+    "alt": "首次装载与依赖",
+    "sha256": "f83fd71d1cb14f0a5d999a090237de4523985a1526f9a41de6ccd44ab603ccae"
+  },
+  {
+    "id": "diagram-system",
+    "file": "diagram-system.webp",
+    "alt": "系统架构",
+    "sha256": "1d5ccbe5bddeed8364ec253de6ff69cf93c275cf79d3c0b9f1f2a12f4d43643d"
+  },
+  {
+    "id": "diagram-wechat",
+    "file": "diagram-wechat.webp",
+    "alt": "视频号 MCP 链",
+    "sha256": "e5ca0f6b900aaffd80233e689f623da723220aeb4b58167de9f3a41e5f081b5a"
+  },
+  {
+    "id": "scene-01",
+    "file": "scene-01.webp",
+    "alt": "用摄像机记录展会、展台洽谈和青色信息轨迹",
+    "sha256": "573f4cac7e9c5737c18ea46763c9eb8e2333227289eb2b8577907b894d4807bb"
+  },
+  {
+    "id": "scene-02",
+    "file": "scene-02.webp",
+    "alt": "展前选题用的分镜卡和产品样件",
+    "sha256": "926328da3d13c17caf731a2b2c2d329f9c94f0cd27a74b1dbea6ebc2116ee72d"
+  },
+  {
+    "id": "scene-03",
+    "file": "scene-03.webp",
+    "alt": "展会现场的授权拍摄场景",
+    "sha256": "446f50922445a1cff7c595f07bef9bdda901e2a5270a554fa87809a7a7c78f6d"
+  },
+  {
+    "id": "scene-04",
+    "file": "scene-04.webp",
+    "alt": "媒体原片与时码整理",
+    "sha256": "3e88dd0214d33e30998f973e1c4a2400ad9cef0510bb205e25b21f5434de1281"
+  },
+  {
+    "id": "scene-05",
+    "file": "scene-05.webp",
+    "alt": "剪辑素材按时间分层的概念图",
+    "sha256": "0960887104b45e1b914394faa87ea2be2fbe72929aeec5d32dccd16205b5967a"
+  },
+  {
+    "id": "scene-06",
+    "file": "scene-06.webp",
+    "alt": "展会企业线索与来源核验",
+    "sha256": "f66901d4c63d837ec89ed93afdf74250047975cb628f3a7c2d4a54f21dc09932"
+  },
+  {
+    "id": "scene-07",
+    "file": "scene-07.webp",
+    "alt": "视频号作品和评论关系示意",
+    "sha256": "31f081d1fff3ed0bd6ca4c6a42b764811a56f98877a95b26232c8141885b3488"
+  },
+  {
+    "id": "scene-08",
+    "file": "scene-08.webp",
+    "alt": "给海外采购商准备展会邀约",
+    "sha256": "37ea9b7ce4c6025ed769d1bddefbce60e7f0c291cb02f6d5fda85cda216a75ea"
+  },
+  {
+    "id": "scene-09",
+    "file": "scene-09.webp",
+    "alt": "销售按证据交接候选",
+    "sha256": "888daaee5cc5334d6e8ddadb904d8f3d10c04b20e2765c128b1f785f068bc2ce"
+  },
+  {
+    "id": "scene-10",
+    "file": "scene-10.webp",
+    "alt": "展后回访记录与阶段归档",
+    "sha256": "126376ce02b070435d24e1a191631aebcad818902842a141c97bf9f76e5214c8"
+  }
+]

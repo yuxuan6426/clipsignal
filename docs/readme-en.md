@@ -1,19 +1,49 @@
 ---
 type: "Guide"
-title: "ClipSignal quickstart"
-description: "English onboarding and acceptance."
+title: "ClipSignal — trade content and buyer research"
+description: "English quickstart for the ClipSignal Codex toolkit."
 tags: ["ClipSignal"]
 ---
 
-# ClipSignal quickstart
+# ClipSignal — trade content and buyer research
 
 
-ClipSignal is a Windows Codex workspace for trade show content, editable Jianying drafts, buyer research and authorized outreach.
+ClipSignal gives trade show teams two independently usable workflows: editable media drafts and verifiable company leads. Keep the source, observed result, and handoff for each step.
 
-Paste into Codex:
+[Install](../INSTALL.md) · [Product site](pages.md) · [Technical diagrams](diagrams.md) · [中文](../README.md)
+
+<!-- hero:start -->
+![An editorial illustration of cameras and trade show meetings](../assets/showcase/scene-01.webp)
+<!-- hero:end -->
+
+## Start in Codex
 
 > Install and load ClipSignal from https://github.com/yuxuan6426/clipsignal. Follow INSTALL.md, run the core preflight and the synthetic candidate test, and report ready modules and missing configuration.
 
-The installation runs against a local GitHub checkout. The current session can read the returned project `entry` directly. Open the checkout in a new Codex session to use `$clipsignal` as a project skill. A user-wide launcher is optional. [Installation](../INSTALL.md)
+| Workflow | Input | Deliverable |
+| --- | --- | --- |
+| Content | Reference works and authorized footage | Shot brief, timestamped evidence, editable Jianying draft |
+| Research | Market, product, buyer role, keywords | Deduplicated company candidates with sources and review state |
+| WeChat Channels | Authorized records and visible public material | Local workbench and MCP detail and comment reads |
+| Handoff | Verified business channels and authorization | Outreach and publication receipts, each verified separately |
 
-ClipSignal supports project setup, reference-to-draft production, browser-based buyer research, WeChat Channels MCP and receipt-based outreach. Validate account-specific services on the recipient device. [Workflow](workflow.md) · [Agent research](research.md) · [Dependencies](deps.md)
+```mermaid
+flowchart LR
+    A["Trade show task"] --> B["Media and editing"] --> C["Editable draft"]
+    A --> D["Company research"] --> E["Evidence and handoff"]
+```
+
+<!-- showcase:start -->
+<details open>
+<summary>Illustrated workflows</summary>
+
+| | |
+| --- | --- |
+| ![Shot plan and product samples](../assets/showcase/scene-02.webp) | ![Recording an interview on the exhibition floor](../assets/showcase/scene-03.webp) |
+| ![Layered editing media](../assets/showcase/scene-05.webp) | ![Reviewing company evidence at an exhibition](../assets/showcase/scene-06.webp) |
+| ![ClipSignal system architecture](../assets/showcase/diagram-system.webp) | ![Company verification workflow](../assets/showcase/diagram-leads.webp) |
+
+</details>
+<!-- showcase:end -->
+
+[Workflow](workflow.md) · [Acceptance](test.md) · [Agent research](research.md) · [Dependencies](deps.md)
