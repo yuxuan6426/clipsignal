@@ -187,6 +187,6 @@ flowchart LR
 
 ## 实测与复跑
 
-冠英案例已验证 22 秒双语草稿首页人工确认、X 与 Facebook 同一企业核验和合成询盘交接。另有 Gmail 自验发送、云蝠知识库读回、视频号 MCP 作品与评论读取。正式成片发布、邮件收件、外呼接通和到访按展会现场回执分别验收。[验收步骤](docs/test.md) · [Agent Research](docs/research.md) · [分发清单](delivery.json)
+冠英案例已验证 22 秒双语草稿首页人工确认、X 与 Facebook 同一企业核验和合成询盘交接。另有 Gmail 自验发送、云蝠知识库读回、视频号 MCP 作品与评论读取。正式成片发布、邮件收件、外呼接通和到访按展会现场回执分别验收。[七项能力的实证与待验](docs/test.md#七项能力的实证与待验) · [Agent Research](docs/research.md) · [分发清单](delivery.json)
 
 [依赖](docs/deps.md) · [Apache-2.0](LICENSE) · [Agent 检索入口](llms.txt)
